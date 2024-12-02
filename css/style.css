@@ -10,29 +10,7 @@
   --white: #ffffff;
   --max-width: 1200px;
 }
-.custom-bg{
-  background-color: var(--primary-color);
-}
 
-/*** Food Menu ***/
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--secondary-color) !important;
-}
-
-.navbar-dark .navbar-nav .nav-link.active::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-.navbar-dark .navbar-nav .nav-link.active:hover::after {
-  width: 50%;
-}
 
 * {
   padding: 0;
@@ -531,7 +509,7 @@ nav {
 }
 /* Footer end */
 /* Responsive */
-/* @media (width < 900px) 
+ @media (width < 900px) 
 {
   .nav__links {
     display: none;
@@ -571,7 +549,7 @@ nav {
   }
 }
 /* Responsive */
-/* @media (width < 600px) 
+ @media (width < 600px) 
 {
   .explore__header {
     flex-direction: column;
@@ -692,7 +670,7 @@ nav {
   gap: 2rem;
 }
 
-.footer__blur {
+ .footer__blur {
   bottom: 0;
   right: 0;
 }
@@ -751,9 +729,9 @@ nav {
   padding: 1rem;
   font-size: 0.8rem;
   color: var(--white);
-} */
+} 
 
-/* @media (width < 900px) {
+ @media (width < 900px) {
   .nav__links {
     display: none;
   }
@@ -833,4 +811,30 @@ nav {
     text-align: center;
   }
 }
-} */ 
+}
+
+
+/* Boostrap */
+.custom-bg{
+  background-color: var(--primary-color);
+}
+
+/*** Food Menu ***/
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover::after {
+  width: 50%;
+}
