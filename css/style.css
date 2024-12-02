@@ -655,7 +655,7 @@ nav {
 
 
 /* Responsive */
- @media (width < 900px) 
+ @media (width < 768px) 
 {
 
   .order_main{
@@ -703,8 +703,10 @@ nav {
 
 
 /* Responsive */
- @media (width < 600px) 
+ @media (width < 480px) 
 {
+
+
   .explore__header {
     flex-direction: column;
   }
@@ -886,7 +888,7 @@ nav {
 }
 } 
 
- @media (width < 900px) {
+ @media (width < 768px) {
   .nav__links {
     display: none;
   }
@@ -925,7 +927,7 @@ nav {
   }
 }
 
-@media (width < 600px) 
+@media (width < 480px) 
 {
   .explore__header {
     flex-direction: column;
@@ -969,115 +971,106 @@ nav {
 
 /*Team*/
 
-.team{
+.team {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   background-image: url(image/bg1.jpg);
   background-size: cover;
   background-position: center;
-  background-color:white;
+  padding: 20px 0;
 }
 
-.team h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.team h1 {
+  text-align: center;
   font-size: 55px;
   margin-bottom: 30px;
 }
 
-.team h1 span{
+.team h1 span {
   color: #318ffa;
-  margin-left: 15px;
   font-family: mv boli;
 }
 
-.team h1 span::after{
+.team h1 span::after {
   content: '';
+  display: block;
   width: 100%;
   height: 2px;
   background: #3199fa;
-  display: block;
-  position: relative;
-  bottom: 15px;
+  margin: 5px auto;
 }
 
-.team .team_box{
-  width: 95%;
+/* Grid Layout cho team box */
+.team .team_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Mặc định: 3 cột cho laptop */
+  gap: 20px;
+  width: 90%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 13%;
 }
 
-.team .team_box .profile{
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  margin: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  transition: 0.4s;
-}
-
-.team .team_box .profile:hover{
+.team .team_box .profile {
+  background-color: white;
   border-radius: 20px;
-  height: 320px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.team .team_box .profile img{
-  width: 250px;
-  height: 250px;
+.team .team_box .profile:hover {
+  transform: translateY(-10px);
+}
+
+.team .team_box .profile img {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  z-index: 2;
-  transition: 0.4s;
 }
 
-.team .team_box .profile:hover img{
-  border-radius: 20px;
-  margin-top: -230px;
+.team .team_box .profile .info {
+  padding: 15px;
 }
 
-.team .team_box .profile .info{
-  position: absolute;
-  text-align: center;
-  top: 25%;
-  transition: 0.4s;
-}
-
-.team .team_box .profile:hover .info{
-  top: 60%;
-}
-
-.team .team_box .profile .info .name{
+.team .team_box .profile .info .name {
+  font-size: 1.5em;
   color: #3188fa;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.team .team_box .profile .info .bio{
-  width: 70%;
-  text-align: center;
-  margin: 0 auto 10px auto;
+.team .team_box .profile .info .bio {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.team .team_box .profile .info .team_icon i{
-  margin: 10px 5px 5px 0;
-  cursor: pointer;
-  transition: 0.3s;
+.team .team_box .profile .info .team_icon i {
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.team .team_box .profile .info .team_icon i:hover{
+.team .team_box .profile .info .team_icon i:hover {
   color: #fac031;
 }
+
+/* Responsive cho Tablet */
+@media screen and (max-width: 1024px) {
+  .team .team_box {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột cho tablet */
+  }
+
+  .team h1 {
+    font-size: 45px;
+  }
+}
+
+/* Responsive cho Phone */
+@media screen and (max-width: 480px) {
+  .team .team_box {
+    grid-template-columns: 1fr; /* 1 cột cho điện
+
 
 /* about */
 .about{
