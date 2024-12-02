@@ -974,6 +974,7 @@ nav {
 .team {
   width: 100%;
   min-height: 90vh;
+  background-color:white;
   background-image: url(image/bg1.jpg);
   background-size: cover;
   background-position: center;
@@ -1070,8 +1071,9 @@ nav {
 @media screen and (max-width: 480px) {
   .team .team_box {
     grid-template-columns: 1fr; /* 1 cột cho điện
-
-
+  */
+  }
+}
 /* about */
 .about{
   margin-bottom:50px;
@@ -1208,6 +1210,7 @@ nav {
   color: var(--secondary-color) !important;
 }
 
+
 .navbar-dark .navbar-nav .nav-link.active::after {
   content: "";
   position: absolute;
@@ -1219,6 +1222,18 @@ nav {
   transition: 0.3s;
 }
 
-.navbar-dark .navbar-nav .nav-link.active:hover::after {
+.navbar-dark .navbar-nav .nav-link.active p:hover::after {
   width: 50%;
+}
+
+.custom-text{
+  color: var(--secondary-color);
+}
+.custom-text-h1-span{
+  color: var(--primary-color);
+  font-weight: 800;
+  -webkit-text-stroke:2px white;
+}
+.custom-text-p{
+  color: var(--text-light);
 }
