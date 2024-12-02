@@ -489,7 +489,7 @@ nav {
   color: var(--white);
 }
 
-.footer__col > a {
+.footer__col  a {
   display: block;
   margin-bottom: 1rem;
   color: var(--text-light);
@@ -508,9 +508,160 @@ nav {
   color: var(--white);
 }
 /* Footer end */
+
+
+/* Order */
+
+.order{
+  width: 100%;
+  height: auto;
+  padding: 70px 20px;
+  background-image: url(image/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow:hidden;
+  box-sizing: border-box;
+}
+
+.order h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffeeee;
+  font-size: 55px;
+  margin-bottom:30px;
+}
+
+.order h1 span{
+  color: hsl(213, 82%, 63%);
+  margin-right: 15px;
+  font-family: mv boli;
+}
+
+.order h1 span::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #31a3fa;
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+
+.order .order_main{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:30px;
+}
+
+.order .order_main .order_image img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.order .order_main form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.order .order_main form .input p{
+  line-height: 25px;
+  color:white;
+  width: 100%;
+  box-sizing: border-box;/* tránh tràn */
+}
+
+.order .order_main form .input{
+  margin: 5px;
+}
+
+.order .order_main form .input input{
+  width: 300px;
+  height: 35px;
+  padding: 0 10px;
+  border: 2px solid #eae1e1;
+  background: #fff6f6;
+  outline: none;
+  border-radius: 3px;
+}
+
+.order .order_main form .input input:focus{
+  border: 2px solid #ffffff;
+}
+
+.order .order_main form .order_btn{
+  padding: 10px 0;
+  background: #6179d7;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+/* ORDER RESPONSIVE */
+/* Responsive cho tablet */
+@media (max-width: 768px) {
+  .order h1 {
+    font-size: 2rem;
+  }
+
+  .order .order_main {
+    flex-direction: column; /* Đổi thành dọc */
+  }
+
+  .order .order_main .order_image img {
+    max-width: 90%;
+  }
+
+  .order .order_main form {
+    grid-template-columns: 1fr; /* Một cột */
+  }
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 480px) {
+  .order h1 {
+    font-size: 1.5rem;
+  }
+
+  .order .order_main {
+    gap: 15px;
+  }
+
+  .order .order_main .order_image img {
+    max-width: 100%;
+  }
+
+  .order .order_main form .input p {
+    font-size: 0.9rem;
+  }
+
+  .order .order_main form .input input {
+    font-size: 0.9rem;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .order .order_main form .order_btn {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Responsive */
  @media (width < 900px) 
 {
+
+  .order_main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .nav__links {
     display: none;
   }
@@ -548,6 +699,9 @@ nav {
     grid-template-columns: 1fr 200px;
   }
 }
+
+
+
 /* Responsive */
  @media (width < 600px) 
 {
@@ -729,6 +883,7 @@ nav {
   padding: 1rem;
   font-size: 0.8rem;
   color: var(--white);
+}
 } 
 
  @media (width < 900px) {
@@ -810,7 +965,6 @@ nav {
   .footer__bar {
     text-align: center;
   }
-}
 }
 
 
