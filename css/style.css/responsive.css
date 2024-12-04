@@ -1,0 +1,426 @@
+/* ORDER RESPONSIVE */
+/* Responsive cho tablet */
+@media (max-width: 768px) {
+    .order h1 {
+      font-size: 2rem;
+    }
+  
+    .order .order_main {
+      flex-direction: column; /* Đổi thành dọc */
+    }
+  
+    .order .order_main .order_image img {
+      max-width: 90%;
+    }
+  
+    .order .order_main form {
+      grid-template-columns: 1fr; /* Một cột */
+    }
+  }
+  
+  /* Responsive cho điện thoại */
+  @media (max-width: 480px) {
+    .order h1 {
+      font-size: 1.5rem;
+    }
+  
+    .order .order_main {
+      gap: 15px;
+    }
+  
+    .order .order_main .order_image img {
+      max-width: 100%;
+    }
+  
+    .order .order_main form .input p {
+      font-size: 0.9rem;
+    }
+  
+    .order .order_main form .input input {
+      font-size: 0.9rem;
+      height: 30px;
+      padding: 5px;
+    }
+  
+    .order .order_main form .order_btn {
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  /* Responsive */
+   @media (width < 768px) 
+  {
+  
+    .order_main{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .nav__links {
+      display: none;
+    }
+  
+    .header__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .header__image {
+      grid-area: 1/1/2/2;
+    }
+  
+    .explore__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .class__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .class__image {
+      min-height: 500px;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .review__container {
+      gap: 2rem;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+  
+  
+  
+  /* Responsive */
+   @media (width < 480px) 
+  {
+  
+  
+    .explore__header {
+      flex-direction: column;
+    }
+  
+    .explore__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .join__container {
+      margin-bottom: 15rem;
+    }
+  
+    .join__grid {
+      width: 100%;
+      margin: 0;
+      bottom: -20rem;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .review__container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .review__footer {
+      flex-direction: column;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 150px;
+    }
+  
+    .footer__bar {
+      text-align: center;
+    }
+    .review 
+    {
+    background-color: var(--primary-color-light);
+  }
+  
+  .review__container {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .review__container > span {
+    font-size: 6rem;
+    color: var(--secondary-color);
+    opacity: 0.5;
+  }
+  
+  .review__content {
+    flex: 1;
+  }
+  
+  .review__content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  
+  .review__content p {
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+  }
+  
+  .review__rating span {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .review__footer {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .review__member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .review__member img {
+    max-width: 60px;
+    border-radius: 100%;
+  }
+  
+  .review__member__details h4 {
+    margin-bottom: 0;
+  }
+  
+  .review__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .review__nav span {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+  
+  
+  .footer__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+   .footer__blur {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .footer__logo {
+    max-width: 150px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer__col p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+  }
+  
+  .footer__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer__socials a {
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 100%;
+    transition: 0.3s;
+  }
+  
+  .footer__socials a:hover {
+    color: var(--white);
+    background-color: var(--secondary-color);
+  }
+  
+  .footer__col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  
+  .footer__col > a {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    transition: 0.3s;
+  }
+  
+  .footer__col > a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .footer__bar {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: var(--white);
+  }
+  } 
+  
+   @media (width < 768px) {
+    .nav__links {
+      display: none;
+    }
+  
+    .header__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .header__image {
+      grid-area: 1/1/2/2;
+    }
+  
+    .explore__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .class__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .class__image {
+      min-height: 500px;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .review__container {
+      gap: 2rem;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+  
+  @media (width < 480px) 
+  {
+    .explore__header {
+      flex-direction: column;
+    }
+  
+    .explore__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .join__container {
+      margin-bottom: 15rem;
+    }
+  
+    .join__grid {
+      width: 100%;
+      margin: 0;
+      bottom: -20rem;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .review__container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .review__footer {
+      flex-direction: column;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 150px;
+    }
+  
+    .footer__bar {
+      text-align: center;
+    }
+  }
+
+  /* Responsive cho Tablet */
+@media screen and (max-width: 768px) {
+    .team .team_box {
+      grid-template-columns: repeat(2, 1fr); /* 2 cột cho tablet */
+    }
+  
+    .team h1 {
+      font-size: 45px;
+    }
+  }
+  
+  /* Responsive cho Phone */
+  @media screen and (max-width: 480px) {
+    .team .team_box {
+      grid-template-columns: 1fr; /* 1 cột cho điện
+    */
+    }
+  }
+
+
+
+  /* nhỏ hơn 768 */
+@media (max-width: 768px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+    }
+  
+    .navbar-dark .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid rgba(111, 78, 78, 0.1)
+    }
+  
+    .navbar-dark .navbar-nav .nav-link,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+    }
+  
+    .navbar-dark .navbar-brand img {
+        max-height: 45px;
+    }
+  }
+  /* 768 trở lên */
+  @media (min-width: 768px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;  /*  Giá trị của z-index càng cao thì phần tử sẽ nằm "trên" các phần tử có giá trị thấp hơn. */
+        /* !important   Nên sử dụng trong các trường hợp cần thiết, như ghi đè các quy tắc từ thư viện bên ngoài.  */
+        background: transparent !important;
+        /* transparent :chỉ làm nền trong suốt, nhưng không ảnh hưởng đến nội dung hoặc khung của phần tử. */
+    }
+    
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: var(--primary-color) !important;
+    }
+  }

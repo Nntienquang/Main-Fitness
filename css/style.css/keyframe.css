@@ -1,0 +1,7 @@
+/* infinite: Lặp lại liên tục */
+@keyframes quay { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+  }
+  
