@@ -1,25 +1,19 @@
 /* ORDER RESPONSIVE */
 /* Responsive cho tablet */
-@media (max-width: 768px) {
-    .order h1 {
-      font-size: 2rem;
-    }
-  
-    .order .order_main {
-      flex-direction: column; /* Đổi thành dọc */
-    }
-  
-    .order .order_main .order_image img {
-      max-width: 90%;
-    }
-  
-    .order .order_main form {
-      grid-template-columns: 1fr; /* Một cột */
-    }
-  }
+/* @media (max-width: 768px) {
+    
+  } */
   
   /* Responsive cho điện thoại */
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
+    
+  } */
+  
+  
+  /* Responsive  mt bảng */
+   @media (width < 768px) 
+  {
+
     .order h1 {
       font-size: 1.5rem;
     }
@@ -46,13 +40,52 @@
       padding: 10px 0;
       font-size: 0.9rem;
     }
-  }
+    .nav__links {
+      display: none;
+    }
   
+    .header__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
   
-  /* Responsive */
-   @media (width < 768px) 
-  {
+    .header__image {
+      grid-area: 1/1/2/2;
+    }
   
+    .explore__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .class__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .class__image {
+      min-height: 500px;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .review__container {
+      gap: 2rem;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 200px;
+    }
+
+    .team .team_box {
+      grid-template-columns: repeat(2, 1fr); /* 2 cột cho tablet */
+    }
+  
+    .team h1 {
+      font-size: 45px;
+    }
+
+
     .order_main{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -95,12 +128,76 @@
     }
   }
   
+  /* @media (width < 480px) 
+  {
+    
+  } */
+
+  /* Responsive cho Tablet */
+/* @media screen and (max-width: 768px) {
+    
+  }
+   */
   
   
-  /* Responsive */
+  /* Responsive  Phone  */ 
    @media (width < 480px) 
   {
   
+    .order h1 {
+      font-size: 2rem;
+    }
+  
+    .order .order_main {
+      flex-direction: column; /* Đổi thành dọc */
+    }
+  
+    .order .order_main .order_image img {
+      max-width: 90%;
+    }
+  
+    .order .order_main form {
+      grid-template-columns: 1fr; /* Một cột */
+    }
+
+    .explore__header {
+      flex-direction: column;
+    }
+  
+    .explore__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .join__container {
+      margin-bottom: 15rem;
+    }
+  
+    .join__grid {
+      width: 100%;
+      margin: 0;
+      bottom: -20rem;
+    }
+  
+    .price__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .review__container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .review__footer {
+      flex-direction: column;
+    }
+  
+    .footer__container {
+      grid-template-columns: 1fr 150px;
+    }
+  
+    .footer__bar {
+      text-align: center;
+    }
   
     .explore__header {
       flex-direction: column;
@@ -283,105 +380,11 @@
   }
   } 
   
-   @media (width < 768px) {
-    .nav__links {
-      display: none;
-    }
-  
-    .header__container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .header__image {
-      grid-area: 1/1/2/2;
-    }
-  
-    .explore__grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-  
-    .class__container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .class__image {
-      min-height: 500px;
-    }
-  
-    .price__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .review__container {
-      gap: 2rem;
-    }
-  
-    .footer__container {
-      grid-template-columns: 1fr 200px;
-    }
+   /* @media (width < 768px) {
+    
   }
-  
-  @media (width < 480px) 
-  {
-    .explore__header {
-      flex-direction: column;
-    }
-  
-    .explore__grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .join__container {
-      margin-bottom: 15rem;
-    }
-  
-    .join__grid {
-      width: 100%;
-      margin: 0;
-      bottom: -20rem;
-    }
-  
-    .price__grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .review__container {
-      flex-direction: column;
-      gap: 0;
-    }
-  
-    .review__footer {
-      flex-direction: column;
-    }
-  
-    .footer__container {
-      grid-template-columns: 1fr 150px;
-    }
-  
-    .footer__bar {
-      text-align: center;
-    }
-  }
-
-  /* Responsive cho Tablet */
-@media screen and (max-width: 768px) {
-    .team .team_box {
-      grid-template-columns: repeat(2, 1fr); /* 2 cột cho tablet */
-    }
-  
-    .team h1 {
-      font-size: 45px;
-    }
-  }
-  
+   */
   /* Responsive cho Phone */
-  @media screen and (max-width: 480px) {
-    .team .team_box {
-      grid-template-columns: 1fr; /* 1 cột cho điện
-    */
-    }
-  }
 
 
 
