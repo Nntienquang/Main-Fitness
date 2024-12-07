@@ -113,12 +113,23 @@ nav {
   bottom: 0;
   background-color: var(--secondary-color);
   transition: 0.3s;
+  /* Thời gian hiệu ứng chuyển tiếp hiệu ưungs */
 }
 
 .link a:hover::after {
   width: 50%;
 }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Ẩn mặc định trên màn hình lớn */
+  cursor: pointer;
+  width: 30px; /* Kích thước hình ảnh hamburger */
+  height: 30px;
+  /* fill:white; */
+}
 /* Header top  end*/
+/* Header bottom  */
 
 
 /*Team*/
@@ -130,6 +141,7 @@ nav {
   background-image: url(image/bg1.jpg);
   background-size: cover;
   background-position: center;
+  /* hình ảnh nền sẽ được căn giữa trong phần tử cả theo chiều ngang và chiều dọc */
   padding: 20px 0;
 }
 
@@ -140,16 +152,16 @@ nav {
 }
 
 .team h1 span {
-  color: #318ffa;
+  color: #0077ff;
   font-family: mv boli;
 }
 
-.team h1 span::after {
+.team span::after {
   content: '';
   display: block;
   width: 100%;
   height: 2px;
-  background: #3199fa;
+  background: #0077ff;
   margin: 5px auto;
 }
 
@@ -166,6 +178,7 @@ nav {
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
+  /* mọi phần tử con (hoặc nội dung) vượt quá kích thước của phần tử cha sẽ bị ẩn đi mà không có thanh cuộn */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -211,11 +224,13 @@ nav {
 /* Map */
 .map {
 	position: relative;
+  /* vị trí tương đối */
 	height: 560px;
 	background: #ddd;
 }
 .map iframe {
 	position: absolute;
+  /* vị trí tuyệt đối */
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -278,7 +293,7 @@ nav {
   transition: 0.3s;
 }
 
-.footer__col > a:hover {
+.footer__col a:hover {
   color: var(--secondary-color);
 }
 

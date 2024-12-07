@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/boxicons.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
@@ -63,6 +64,7 @@
     <div class="nav__logo">
       <a href="#"><img src="./assets/main-logo.png" alt="logo" /></a>
     </div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGZJREFUSEvtlrENACAMw8pnnMZpfAYTC1W3CDOEA2JhUpUW0GkQNwx+Zt6qj+ohdp7yKtVLDE6c78DiC+c4t/o46WLX8877rlzYOGGqxU/scYryB4KVCwNja9GtlhvwWpQrrQIx1Rt3TwofeC3yFwAAAABJRU5ErkJggg==" class="hamburger" />
     <ul class="nav__links">
       <li class="link"><a href="index.html">Home</a></li>
       <li class="link"><a href="program.html">Program</a></li>
@@ -204,6 +206,7 @@
             <p>Unlock your potential with our expert Personal Trainers.</p>
           </div>
         </div>
+        <!-- cung cấp bởi Remix Icon -->
         <div class="join__card">
           <span><i class="ri-vidicon-fill"></i></span>
           <div class="join__card__content">
@@ -338,6 +341,25 @@
 <!-- Footer -->
 </div>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav__links');
+  
+    // Khi người dùng nhấn vào hamburger, toggle (hiển thị/ẩn) menu
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  
+    // Khi người dùng nhấn vào một vị trí khác ngoài menu, ẩn menu
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+</script>
 
       <script src="./js/bootstrap.bundle.min.js"></script>
       <script src="./js/jqeuery.min.js"></script>

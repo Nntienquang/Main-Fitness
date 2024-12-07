@@ -77,47 +77,58 @@ body {
 /* Header */
 /* Header top */
 nav {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .nav__logo {
-    max-width: 150px;
-  }
-  
-  .nav__links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
-  
-  .link a {
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: var(--white);
-  }
-  
-  .link a::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
-  }
-  
-  .link a:hover::after {
-    width: 50%;
-  }
-  /* Header top  end*/
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__logo {
+  max-width: 150px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.link a:hover::after {
+  width: 50%;
+}
+/* After: Đây là một pseudo-element (phần tử giả) trong CSS  */
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Ẩn mặc định trên màn hình lớn */
+  cursor: pointer;
+  width: 30px; /* Kích thước hình ảnh hamburger */
+  height: 30px;
+  /* fill:white; */
+}
+/* Header top  end*/
+/* Header bottom  */
 
 
 /* Main */
@@ -254,7 +265,7 @@ nav {
   .order .order_main form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+    gap: 15px;
     max-width: 600px;
     width: 100%;
   }
@@ -274,9 +285,10 @@ nav {
     width: 300px;
     height: 35px;
     padding: 0 10px;
-    border: 2px solid #eae1e1;
+    border: 2px solid #0073ff;
     background: #fff6f6;
     outline: none;
+    /* bỏ viền ngoài khi có :focus */
     border-radius: 3px;
   }
   
@@ -292,6 +304,11 @@ nav {
     text-align: center;
     margin-top: 20px;
     text-decoration: none;
+    border-radius: 5px;
+  }
+  .order .order_main form .order_btn:hover{
+    background-color: #00ccff;
+    transition: 1s;
   }
 
 /* Footer  */

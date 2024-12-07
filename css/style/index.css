@@ -78,6 +78,7 @@ body {
 }
 
 
+
 /* Header */
 /* Header top */
 nav {
@@ -120,6 +121,15 @@ nav {
 
 .link a:hover::after {
   width: 50%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Ẩn mặc định trên màn hình lớn */
+  cursor: pointer;
+  width: 30px; /* Kích thước hình ảnh hamburger */
+  height: 30px;
+  /* fill:white; */
 }
 /* Header top  end*/
 /* Header bottom  */

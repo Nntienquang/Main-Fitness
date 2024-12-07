@@ -11,15 +11,52 @@
   
   
   /* Responsive  mt bảng */
-   @media (width < 768px) 
-  {
-
+  @media (max-width: 768px) {
+    /* Nav */
+    nav {
+      flex-wrap: wrap;
+      /* Các phần tử sẽ chuyển sang dòng mới khi không còn đủ không gian trên dòng hiện tại. */
+    }
+  
+    .hamburger {
+      display: block; /* Hiển thị nút hamburger */
+    }
+  
+    .nav__links {
+      display: none; /* Ẩn menu mặc định */
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 1rem;
+      position: absolute;
+      /* Đặt vị trí của menu ở chế độ tuyệt đối. */
+      top: 20%;
+      left: 0;
+      /* Đặt vị trí của menu ở phía trái của phần tử chứa */
+      z-index: 1000;
+      /* Đặt mức độ ưu tiên của menu trong việc hiển thị so với các phần tử khác */
+    }
+  
+    .nav__links.active {
+      display: grid; /* Hiển thị menu khi có class 'active' */
+    }
+    /* Nav end */
+  
+    /* Section container */
+    .section__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Order */
     .order h1 {
       font-size: 1.5rem;
     }
   
     .order .order_main {
       gap: 15px;
+      display: grid; /* Thêm display grid để quản lý layout tốt hơn */
+      grid-template-columns: 1fr 1fr;
     }
   
     .order .order_main .order_image img {
@@ -40,10 +77,9 @@
       padding: 10px 0;
       font-size: 0.9rem;
     }
-    .nav__links {
-      display: none;
-    }
+    /* Order end */
   
+    /* Header */
     .header__container {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -51,12 +87,16 @@
     .header__image {
       grid-area: 1/1/2/2;
     }
+    /* header end */
   
+    /* Explore */
     .explore__grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
+    /* Explore end */
   
+    /* Class */
     .class__container {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -64,19 +104,19 @@
     .class__image {
       min-height: 500px;
     }
+    /* class end */
   
+    /* Price */
     .price__grid {
       grid-template-columns: repeat(2, 1fr);
     }
   
+    /* Review */
     .review__container {
       gap: 2rem;
     }
   
-    .footer__container {
-      grid-template-columns: 1fr 200px;
-    }
-
+    /* Team */
     .team .team_box {
       grid-template-columns: repeat(2, 1fr); /* 2 cột cho tablet */
     }
@@ -84,49 +124,14 @@
     .team h1 {
       font-size: 45px;
     }
-
-
-    .order_main{
-      display:grid;
+  
+    /* Order Main */
+    .order_main {
+      display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    .nav__links {
-      display: none;
-    }
-  
-    .header__container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .header__image {
-      grid-area: 1/1/2/2;
-    }
-  
-    .explore__grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-  
-    .class__container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .class__image {
-      min-height: 500px;
-    }
-  
-    .price__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .review__container {
-      gap: 2rem;
-    }
-  
-    .footer__container {
-      grid-template-columns: 1fr 200px;
-    }
   }
+
   
   /* @media (width < 480px) 
   {
@@ -141,9 +146,8 @@
   
   
   /* Responsive  Phone  */ 
-   @media (width < 480px) 
-  {
-  
+  @media (max-width: 480px) {
+    /* Order */
     .order h1 {
       font-size: 2rem;
     }
@@ -159,7 +163,8 @@
     .order .order_main form {
       grid-template-columns: 1fr; /* Một cột */
     }
-
+  
+    /* Explore */
     .explore__header {
       flex-direction: column;
     }
@@ -168,6 +173,7 @@
       grid-template-columns: repeat(1, 1fr);
     }
   
+    /* Join */
     .join__container {
       margin-bottom: 15rem;
     }
@@ -178,207 +184,164 @@
       bottom: -20rem;
     }
   
+    /* Price */
     .price__grid {
       grid-template-columns: repeat(1, 1fr);
     }
   
-    .review__container {
+    /* Review */
+    .review__container,
+    .review__footer {
       flex-direction: column;
       gap: 0;
     }
   
-    .review__footer {
-      flex-direction: column;
-    }
-  
-    .footer__container {
-      grid-template-columns: 1fr 150px;
-    }
-  
-    .footer__bar {
-      text-align: center;
-    }
-  
-    .explore__header {
-      flex-direction: column;
-    }
-  
-    .explore__grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .join__container {
-      margin-bottom: 15rem;
-    }
-  
-    .join__grid {
-      width: 100%;
-      margin: 0;
-      bottom: -20rem;
-    }
-  
-    .price__grid {
-      grid-template-columns: repeat(1, 1fr);
+    .review {
+      background-color: var(--primary-color-light);
     }
   
     .review__container {
-      flex-direction: column;
-      gap: 0;
+      display: flex;
+      gap: 2rem;
+    }
+  
+    .review__container > span {
+      font-size: 6rem;
+      color: var(--secondary-color);
+      opacity: 0.5;
+    }
+  
+    .review__content {
+      flex: 1;
+    }
+  
+    .review__content h4 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+  
+    .review__content p {
+      max-width: 800px;
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+  
+    .review__rating span {
+      font-size: 1.5rem;
+      color: var(--secondary-color);
     }
   
     .review__footer {
-      flex-direction: column;
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
     }
   
+    .review__member {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .review__member img {
+      max-width: 60px;
+      border-radius: 100%;
+    }
+  
+    .review__member__details h4 {
+      margin-bottom: 0;
+    }
+  
+    .review__nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .review__nav span {
+      font-size: 2rem;
+      color: var(--secondary-color);
+      cursor: pointer;
+    }
+  
+    /* Footer */
     .footer__container {
-      grid-template-columns: 1fr 150px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr; /* Chỉnh lại cho responsive */
+      gap: 2rem;
+    }
+  
+    .footer__blur {
+      bottom: 0;
+      right: 0;
+    }
+  
+    .footer__logo {
+      max-width: 150px;
+      margin-bottom: 2rem;
+    }
+  
+    .footer__col p,
+    .footer__col a {
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+  
+    .footer__socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 20px;
+    }
+  
+    .footer__socials a {
+      padding: 5px 10px;
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
+      border-radius: 100%;
+      transition: 2s;
+    }
+  
+    .footer__socials a:hover {
+      color: var(--white);
+      background-color: var(--secondary-color);
+    }
+  
+    .footer__col h4 {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+  
+    .footer__col > a:hover {
+      color: var(--secondary-color);
     }
   
     .footer__bar {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: var(--white);
       text-align: center;
     }
-    .review 
-    {
-    background-color: var(--primary-color-light);
-  }
   
-  .review__container {
-    display: flex;
-    gap: 2rem;
-  }
+    /* Section container */
+    .section__container {
+      grid-template-columns: 1fr;
+    }
   
-  .review__container > span {
-    font-size: 6rem;
-    color: var(--secondary-color);
-    opacity: 0.5;
+    .footer__col {
+      align-items: flex-start;
+    }
   }
-  
-  .review__content {
-    flex: 1;
-  }
-  
-  .review__content h4 {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--white);
-  }
-  
-  .review__content p {
-    max-width: 800px;
-    margin-bottom: 2rem;
-    color: var(--text-light);
-  }
-  
-  .review__rating span {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-  }
-  
-  .review__footer {
-    margin-top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .review__member {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  
-  .review__member img {
-    max-width: 60px;
-    border-radius: 100%;
-  }
-  
-  .review__member__details h4 {
-    margin-bottom: 0;
-  }
-  
-  .review__nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .review__nav span {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    cursor: pointer;
-  }
-  
-  
-  .footer__container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 400px repeat(3, 1fr);
-    gap: 2rem;
-  }
-  
-   .footer__blur {
-    bottom: 0;
-    right: 0;
-  }
-  
-  .footer__logo {
-    max-width: 150px;
-    margin-bottom: 2rem;
-  }
-  
-  .footer__col p {
-    margin-bottom: 2rem;
-    color: var(--text-light);
-  }
-  
-  .footer__socials {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .footer__socials a {
-    padding: 5px 10px;
-    font-size: 1.25rem;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    border-radius: 100%;
-    transition: 0.3s;
-  }
-  
-  .footer__socials a:hover {
-    color: var(--white);
-    background-color: var(--secondary-color);
-  }
-  
-  .footer__col h4 {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--white);
-  }
-  
-  .footer__col > a {
-    display: block;
-    margin-bottom: 1rem;
-    color: var(--text-light);
-    transition: 0.3s;
-  }
-  
-  .footer__col > a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .footer__bar {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 1rem;
-    font-size: 0.8rem;
-    color: var(--white);
-  }
-  } 
   
    /* @media (width < 768px) {
     
