@@ -208,7 +208,19 @@ nav {
   color: #fac031;
 }
 
-
+/* Map */
+.map {
+	position: relative;
+	height: 560px;
+	background: #ddd;
+}
+.map iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
 /* Footer  */
 .footer__container {
   position: relative;
