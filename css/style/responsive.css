@@ -305,7 +305,8 @@
       color: var(--secondary-color);
       border: 1px solid var(--secondary-color);
       border-radius: 100%;
-      transition: 2s;
+      transition: 0.3s;
+      /* Thời gian hiệu ứng chuyển tiếp hiệu ứng */
     }
   
     .footer__socials a:hover {
