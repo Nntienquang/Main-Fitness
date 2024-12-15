@@ -1,31 +1,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+/* Định nghĩa biến chủ đạo */
 :root {
   --primary-color: #2f2b2b;
   --primary-color-light: #162e5e;
   --primary-color-extra-light: #080809;
-  --secondary-color: #4482d8;
+  --secondary-color: #1670ed;
   --secondary-color-dark: #2cd6c5;
   --text-light: #8ba2c3;
   --white: #ffffff;
   --max-width: 1200px;
+  --transition: 0.3s ease; /* Biến cho hiệu ứng chuyển động */
 }
 
-
-* {
-  padding: 0;
+/* Reset và cấu trúc cơ bản */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color-extra-light);
+  color: var(--white);
+  line-height: 1.6;
+}
 
-/* Container same */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nút bấm */
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+/* Hình ảnh */
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* Giữ tỷ lệ khung hình tốt hơn */
+}
+
+/* Container chung */
 .section__container {
   max-width: var(--max-width);
-  margin: auto;
+  margin: 0 auto;
   padding: 5rem 1rem;
 }
 
+/* Tiêu đề chung */
 .section__header {
   margin-bottom: 1rem;
   font-size: 2.25rem;
@@ -36,182 +76,11 @@
 
 .section__subheader {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   color: var(--text-light);
 }
-/* Container same end */
-.btn {
-  padding: 1rem 2rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-.btn:hover {
-  background-color: var(--secondary-color-dark);
-}
-
-img {
-  width: 100%;
-  display: flex;
-}
-
-a {
-  text-decoration: none;
-}
-
-.bg__blur {
-  position: absolute;
-  box-shadow: 0 0 1000px 50px var(--secondary-color);
-  z-index: -1;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--primary-color);
-}
-
-
-
-/* Header */
-/* Header top */
-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.nav__logo {
-  max-width: 150px;
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: var(--white);
-}
-
-.link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-.link a:hover::after {
-  width: 50%;
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none; /* Ẩn mặc định trên màn hình lớn */
-  cursor: pointer;
-  width: 30px; /* Kích thước hình ảnh hamburger */
-  height: 30px;
-  /* fill:white; */
-}
-/* Header top  end*/
-/* Header bottom  */
-
-
-.header__container {
-  position: relative;
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2rem;
-}
-
-.header__container::before {
-  content: "FITNESS";
-  position: absolute;
-  bottom: 5rem;
-  right: 20rem;
-  font-size: 10rem;
-  font-weight: 700;
-  line-height: 7rem;
-  color: var(--white);
-  opacity: 0.05;
-  z-index: -1;
-}
-
-.header__blur {
-  bottom: 5rem;
-  right: 0;
-}
-
-.header__content h4 {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-}
-
-.header__content h1 {
-  margin-bottom: 1rem;
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: 6rem;
-  color: var(--white);
-}
-
-.header__content h1 span {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--white);
-}
-
-.header__content p {
-  margin-bottom: 2rem;
-  color: var(--text-light);
-}
-
-.header__image {
-  position: relative;
-}
-
-.header__image::before {
-  content: "o";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40rem;
-  font-weight: 400;
-  line-height: 20rem;
-  color: var(--secondary-color);
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.header__image img {
-  max-width: 350px;
-  margin: auto;
-}
-/* Header bottom end */
-/* Header end */
-/* <<<<<<< HEAD */
 /* Main */
 /* Main 1 */
 .explore__header {
@@ -525,29 +394,10 @@ nav {
 
 /* /* Boostrap  */
 .custom-bg{
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-light);
 }
 
 /*** Food Menu ***/
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--secondary-color) !important;
-}
-
-
-.navbar-dark .navbar-nav .nav-link.active::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-
-.navbar-dark .navbar-nav .nav-link.active p:hover::after {
-  width: 50%;
-}
 
 .custom-text{
   color: var(--secondary-color);
@@ -563,33 +413,6 @@ nav {
 }
 .custom-text-p{
   color: var(--text-light);
-}
-
-/********** Template CSS **********/
-:root {
-  --primary: #FEA116;
-  --light: #F1F8FF;
-  --dark: #0F172B;
-}
-
-.ff-secondary {
-  font-family: 'Pacifico', cursive;
-}
-
-.fw-medium {
-  font-weight: 600 !important;
-}
-
-.fw-semi-bold {
-  font-weight: 700 !important;
-}
-
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 45px;
-  bottom: 45px;
-  z-index: 99;
 }
 
 
@@ -620,49 +443,10 @@ nav {
 
 
 /*** Navbar ***/
-.navbar-dark .navbar-nav .nav-link {
-  position: relative;
-  margin-left: 25px;
-  padding: 35px 0;
-  font-size: 15px;
-  color: var(--light) !important;
-  text-transform: uppercase;
-  font-weight: 500;
-  outline: none;
-  transition: .5s;
-}
-
-.sticky-top.navbar-dark .navbar-nav .nav-link {
-  padding: 20px 0;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--secondary-color) !important;
-}
-
-.navbar-dark .navbar-brand img {
-  max-height: 100px;
-  transition: .5s;
-}
-
-.sticky-top.navbar-dark .navbar-brand img {
-  max-height: 100px;
-}
-
 
 
 /*** Hero Header ***/
-.hero-header {
-  background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../assets/phonggym.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.hero-header img {
-  animation: quay 50s linear infinite;
-}
 
 /*** Section Title ***/
 .section-title {
@@ -717,88 +501,6 @@ nav {
 }
 
 
-/*** Food Menu ***/
-.nav-pills .nav-item .active {
-  border-bottom: 2px solid var(--primary);
-}
-
-
-/*** Youtube Video ***/
-.video {
-  position: relative;
-  height: 100%;
-  min-height: 500px;
-  background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/video.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.video .btn-play {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  box-sizing: content-box;
-  display: block;
-  width: 32px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  padding: 18px 20px 18px 28px;
-}
-
-.video .btn-play:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 100px;
-  height: 100px;
-  background: var(--primary);
-  border-radius: 50%;
-  animation: pulse-border 1500ms ease-out infinite;
-}
-
-.video .btn-play:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 100px;
-  height: 100px;
-  background: var(--primary);
-  border-radius: 50%;
-  transition: all 200ms;
-}
-
-.video .btn-play img {
-  position: relative;
-  z-index: 3;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.video .btn-play span {
-  display: block;
-  position: relative;
-  z-index: 3;
-  width: 0;
-  height: 0;
-  border-left: 32px solid var(--dark);
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
-}
-
 @keyframes pulse-border {
   0% {
       transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -810,36 +512,6 @@ nav {
       opacity: 0;
   }
 }
-
-#videoModal {
-  z-index: 99999;
-}
-
-#videoModal .modal-dialog {
-  position: relative;
-  max-width: 800px;
-  margin: 60px auto 0 auto;
-}
-
-#videoModal .modal-body {
-  position: relative;
-  padding: 0px;
-}
-
-#videoModal .close {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  right: 0px;
-  top: -30px;
-  z-index: 999;
-  font-size: 30px;
-  font-weight: normal;
-  color: #FFFFFF;
-  background: #000000;
-  opacity: 1;
-}
-
 
 /*** Team ***/
 .team-item {
@@ -967,4 +639,279 @@ nav {
   margin-right: 0;
   padding-right: 0;
   border-right: none;
+}
+
+/* Thanh Navbar chính */
+.navbar {
+  background-color: var(--primary-color-extra-light); /* Nền chủ đạo */
+  position: fixed; /* Gắn navbar cố định ở trên cùng */
+  top: 0; /* Ở vị trí trên cùng của trang */
+  left: 0; /* Canh trái */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tối ưu hóa transition */
+  padding: 1rem; /* Thêm padding để navbar không bị dính vào biên */
+}
+
+/* Màu nền khi cuộn */
+.navbar.scrolled {
+  background-color: var(--primary-color-light); /* Màu tối hơn khi cuộn */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Đổ bóng đậm hơn */
+}
+
+/* Logo */
+.navbar-brand img {
+  max-height: 60px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+/* Nút toggler */
+.navbar-toggler {
+  color: var(--white); /* Màu biểu tượng */
+  font-size: 1.25rem;
+  border: none;
+}
+
+.navbar-toggler:hover {
+  color: var(--secondary-color); /* Màu nhấn khi hover */
+}
+
+/* Các liên kết trong navbar */
+.navbar-nav .nav-link {
+  color: var(--text-light); /* Màu chữ nhạt */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--secondary-color); /* Màu nhấn khi hover hoặc active */
+}
+
+/* Nút "Join Now" */
+.navbar .btn-primary {
+  background-color: var(--secondary-color); /* Màu nhấn chính */
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .btn-primary:hover {
+  background-color: var(--secondary-color-dark); /* Sáng hơn khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+}
+
+/* Biểu tượng mạng xã hội */
+.header__nav__social {
+  margin-left: 20px;
+}
+
+
+.header__nav__social a {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.header__nav__social a:hover {
+  color: var(--secondary-color-dark); /* Đổi màu khi hover */
+}
+
+/* Tối ưu hóa navbar-nav */
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  margin-left: 25px;
+  padding: 35px 0;
+  font-size: 15px;
+  color: var(--text-light) !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: none;
+  transition: 0.5s;
+}
+
+/* Điều chỉnh padding khi có sticky */
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+  padding: 20px 0;
+}
+
+/* Màu khi hover hoặc active */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+/* Tối ưu hóa logo */
+.navbar-dark .navbar-brand img {
+  max-height: 100px;
+  transition: 0.5s;
+}
+
+
+/* Main header */
+/* Header section */
+#img-fluid
+{
+  position: relative;
+  z-index:1;
+}
+#img-fluid::before {
+  content: "o";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* transform: translateY; */
+  font-size: 40rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: rgb(255, 255, 255);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero-header {
+  background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../assets/phonggym.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-header img {
+  animation: quay 50s linear infinite;
+}
+
+/* Center the header */
+.explore-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;  /* Optional: space between the cards */
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  text-align: center; /* Centering text */
+}
+
+/* Card Styles */
+.card {
+  border: none; /* Không có viền */
+  border-radius: 15px; /* Bo tròn góc card */
+  overflow: hidden; /* Ẩn phần vượt ra ngoài card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  position: relative; /* Để hiệu ứng nền được áp dụng đúng */
+}
+
+/* Hình nền cho các card */
+.card::before {
+  content: ''; /* Tạo phần giả trước card để áp dụng nền */
+  position: absolute; /* Định vị vị trí tuyệt đối của phần nền */
+  top: 0; left: 0; right: 0; bottom: 0; /* Chiếm toàn bộ không gian của card */
+  background-size: cover; /* Căng hình nền ra toàn bộ card */
+  background-position: center; /* Căn giữa hình nền */
+  opacity: 0.4; /* Làm mờ hình nền một chút */
+  z-index: -1; /* Đưa hình nền xuống dưới các nội dung của card */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng mượt mà khi hover */
+  
+}
+
+/* Đặt hình nền cho từng card */
+.card:nth-child(1)::before {
+  background-image: url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltbWVyfGVufDB8fDB8fHww); /* Hình nền cho card 1 */
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(2)::before {
+  background-image: url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltbWVyfGVufDB8fDB8fHww); /* Hình nền cho card 2 */
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(3)::before {
+  background-image: url('/assets/3.png'); /* Hình nền cho card 3 */
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(4)::before {
+  background-image: url('/assets/6.jpeg'); /* Hình nền cho card 4 */
+  background-repeat: no-repeat;
+}
+
+/* Hiệu ứng khi hover vào card */
+.card:hover {
+  transform: translateY(-10px); /* Di chuyển card lên một chút */
+  box-shadow: 0 6px 20px rgb(255, 255, 255); /* Tăng cường hiệu ứng bóng đổ */
+}
+
+/* Hiệu ứng hình nền khi hover vào card */
+.card:hover::before {
+  opacity: 0.6; /* Tăng độ sáng của hình nền khi hover */
+  transform: scale(1.05); /* Phóng to hình nền một chút khi hover */
+
+}
+
+/* Các kiểu khác cho card */
+.card-body {
+  padding: 2rem; /* Thêm khoảng cách bên trong card */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Kích thước chữ tiêu đề */
+  font-weight: 600; /* Đậm tiêu đề */
+  color: #333; /* Màu chữ tiêu đề */
+}
+
+.card-text {
+  font-size: 1rem; /* Kích thước chữ mô tả */
+  color: var(--primary-color); /* Màu chữ mô tả */
+  margin-bottom: 1.5rem; /* Khoảng cách dưới chữ mô tả */
+}
+.card-text:hover::before{
+  color:var(--white)
+}
+
+.card span i {
+  font-size: 3rem; /* Kích thước icon */
+  color: var(--secondary-color-dark); /* Màu của icon */
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu cho icon */
+}
+
+.card span i:hover {
+  color: var(--secondary-color); /* Đổi màu khi hover vào icon */
+}
+
+/* Nút bên trong card */
+.card .btn-primary {
+  background-color: var(--secondary-color); /* Màu nền của nút */
+  color: white; /* Màu chữ của nút */
+  border-radius: 25px; /* Bo tròn góc nút */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  font-weight: bold; /* Chữ in đậm */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt mà khi hover vào nút */
+}
+
+.card .btn-primary:hover {
+  background-color: var(--primary-color-light); /* Màu nền của nút khi hover */
+  transform: translateY(-5px); /* Đẩy nút lên một chút khi hover */
+}
+
+/* Hiệu ứng khi card xuất hiện */
+.card.animate-card {
+  transform: translateY(0); /* Đặt lại vị trí card */
+  opacity: 1; /* Đặt độ mờ của card thành 1 */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng mượt mà khi card xuất hiện */
 }

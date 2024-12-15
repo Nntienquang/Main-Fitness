@@ -24,12 +24,9 @@
 
 <body>
 
-  <!-- Container index -->
-  <!-- <div class="container-xxl custom-bg p-0"> -->
-  <!-- header -->
-   <!-- NAVBAR -->
+    <!-- Header Section Begin -->
   <!-- Navbar & main (Thanh điều hướng , main header)-->
-    <!-- <div class="container-xxl position-relative p-0">
+     <div class="container-xxl position-relative">
         <nav class="navbar navbar-expand-lg navbar-dark custom-bg px-4 px-lg-5 py-3 py-lg-0">
           <a href="index.html" class="navbar-brand p-0">
             <h1 class="text-primary m-0">
@@ -39,11 +36,11 @@
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
-          </button> -->
+          </button> 
 
           <!-- quản lý hiển thị và ẩn nội dung của thanh điều hướng (navbar) -->
 
-          <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-5">
               <a href="index.html" class="nav-items nav-link active px-3">
                 <p>Home</p>
@@ -56,124 +53,108 @@
                   Join Now
                </a>
           </div>
+          <div class="header__nav__social">
+            <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-dribbble-line"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
         </nav>
     </div>
-  <nav> -->
 
-   <nav>
-    <div class="nav__logo">
-      <a href="#"><img src="./assets/main-logo.png" alt="logo" /></a>
-    </div>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGZJREFUSEvtlrENACAMw8pnnMZpfAYTC1W3CDOEA2JhUpUW0GkQNwx+Zt6qj+ohdp7yKtVLDE6c78DiC+c4t/o46WLX8877rlzYOGGqxU/scYryB4KVCwNja9GtlhvwWpQrrQIx1Rt3TwofeC3yFwAAAABJRU5ErkJggg==" class="hamburger" />
-    <ul class="nav__links">
-      <li class="link"><a href="index.html">Home</a></li>
-      <li class="link"><a href="program.html">Program</a></li>
-      <li class="link"><a href="aboutus.html">About Us</a></li>
-      <li class="link"><a href="contact.html">Contact</a></li>
-    </ul>
-    <button class="btn">Join Now</button>
-  </nav>
+  
 
 
   <!-- Main Header -->
-<!-- <div class="container-xxl py-5 custom-bg hero-header mb-5">
+<div class="container-fluid py-5 custom-bg hero-header mb-5">
   <div class="container my-5 py-5">
     <div class="row align-items-center g-5">
+      <!-- Header Content -->
       <div class="col-lg-6 text-center text-lg-start">
-        <h4 class="custom-text animated slideInleft">BEST FITNESS IN THE TOWN</h4>
-        <h1 class="display-3 custom-text-h1 animated slideInleft">
+        <h4 class="custom-text animated slideInLeft">BEST FITNESS IN THE TOWN</h4>
+        <h1 class="display-3 custom-text-h1 animated slideInLeft">
             <span class="custom-text-span">MAKE</span> YOUR PERFECT FITNESS
         </h1>
-        <p class="custom-text-p animated slideInleft mb-4 pb-2">
+        <p class="custom-text-p animated slideInLeft mb-4 pb-2">
             Unleash your potential and embark on a journey towards a stronger,
             fitter, and more confident you. Sign up for 'Make Your Body Shape' now
             and witness the incredible transformation your body is capable of!
         </p>
-        <a href=""class="btn btn-primary py-sm-2.5 px-sm-4.5 me-3 animated slideInleft">Get Started</a>
+        <a href="#" class="btn btn-primary py-sm-2.5 px-sm-4.5 me-3 animated slideInLeft">Get Started</a>
       </div>
-      <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-        <img src="./assets/1.png" alt="" class="img-fluid">
+      <!-- Header Image -->
+      <div class="col-lg-6 text-center text-lg-end overflow-hidden" id="img-fluid">
+        <div class="header__image">
+          <img src="./assets/1.png" alt="Fitness Image" class="img-fluid">
+        </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 
-  <!-- header top -->
-  <header class="section__container header__container">
-    <div class="header__content">
-      <span class="bg__blur"></span>
-      <span class="bg__blur header__blur"></span>
-      <h4>BEST FITNESS IN THE TOWN</h4>
-      <h1><span>MAKE</span> YOUR PERFECT FITNESS</h1>
-      <p>
-        Unleash your potential and embark on a journey towards a stronger,
-        fitter, and more confident you. Sign up for 'Make Your Body Shape' now
-        and witness the incredible transformation your body is capable of!
-      </p>
-      <button class="btn">Get Started</button>
-    </div>
-    <div class="header__image">
-      <img src="./assets/1.png" alt="header" />
-    </div>
-  </header>
-  <!-- header bottom -->
-  <!-- header -->
 
 <!-- Main 1 bootstrap -->
 
+<section class="container py-5">
+  <!-- Explore Header -->
+  <div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="mb-0">Explore Our Program</h2>
+  </div>
 
-
-  <!-- Main 1  -->
-  <section class="section__container explore__container">
-    <div class="explore__header">
-      <h2 class="section__header">EXPLORE OUR PROGRAM</h2>
-      <div class="explore__nav">
-        <span><i class="ri-arrow-left-line"></i></span>
-        <span><i class="ri-arrow-right-line"></i></span>
+  <!-- Explore Grid (4 columns with Bootstrap Grid system) -->
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <span class="d-block mb-3"><i class="ri-boxing-fill"></i></span>
+          <h4 class="card-title">Strength</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit incidunt iure iusto cumque aut? Sequi tenetur optio tempora minima, aut quod totam tempore esse delectus ratione quae.</p>
+          <a href="#" class="btn btn-primary">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
       </div>
     </div>
-    <div class="explore__grid">
-      <div class="explore__card">
-        <span><i class="ri-boxing-fill"></i></span>
-        <h4>Strength</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit incidunt iure iusto cumque aut? Sequi
-          tenetur optio tempora minima, aut quod totam tempore esse delectus ratione quae nesciunt molestiae.
-        </p>
-        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
-      </div>
-      <div class="explore__card">
-        <span><i class="ri-heart-pulse-fill"></i></span>
-        <h4>Physical Fitness</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis placeat cupiditate ab amet est quos
-          eligendi ipsum, enim eaque! Ipsum exercitationem fuga mollitia dolore libero praesentium sint eaque rem
-          corrupti.
-        </p>
-        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
-      </div>
-      <div class="explore__card">
-        <span><i class="ri-run-line"></i></span>
-        <h4>Fat Lose</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aliquam necessitatibus rerum libero itaque
-          perspiciatis amet dignissimos? Repellat dolor magnam pariatur quisquam dolorem, aperiam mo
-        </p>
-        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
-      </div>
-      <div class="explore__card">
-        <span><i class="ri-shopping-basket-fill"></i></span>
-        <h4>Weight Gain</h4>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis velit quod inventore eaque! Possimus dicta
-          aperiam expedita itaque dolore voluptates molestiae eius cum amet sapiente dolor, similique, reprehen
-        </p>
-        <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <span class="d-block mb-3"><i class="ri-heart-pulse-fill"></i></span>
+          <h4 class="card-title">Physical Fitness</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis placeat cupiditate ab amet est quos eligendi ipsum, enim eaque! Ipsum exercitationem fuga mollitia dolore libero praesent.</p>
+          <a href="#" class="btn btn-primary">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
       </div>
     </div>
-  </section>
-  <!-- Main 1 end -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <span class="d-block mb-3"><i class="ri-run-line"></i></span>
+          <h4 class="card-title">Fat Loss</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aliquam necessitatibus rerum libero itaque perspiciatis amet dignissimos? Repellat dolor magnam pariatur quisq</p>
+          <a href="#" class="btn btn-primary">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <span class="d-block mb-3"><i class="ri-shopping-basket-fill"></i></span>
+          <h4 class="card-title">Weight Gain</h4>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis velit quod inventore eaque! Possimus dicta aperiam expedita itaque dolore voluptates molestiae eius cum amet sapiente </p>
+          <a href="#" class="btn btn-primary">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
    <!-- Main 2 -->
    <section class="section__container class__container">
     <div class="class__image">
