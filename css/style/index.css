@@ -928,7 +928,7 @@ h2 {
 
 .join-main-img {
   border-radius: 10px;
-  max-width: 100%; /* Giới hạn kích thước hình ảnh không vượt quá 100% */
+  max-width: 70%; /* Giới hạn chiều rộng ảnh */
   height: auto; /* Giữ tỷ lệ cho hình ảnh */
   object-fit: cover; /* Giữ tỷ lệ cho ảnh mà không bị biến dạng */
   transition: transform 0.3s ease-in-out; /* Hiệu ứng zoom khi hover */
