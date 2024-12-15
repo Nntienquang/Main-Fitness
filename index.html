@@ -26,48 +26,46 @@
 
     <!-- Header Section Begin -->
   <!-- Navbar & main (Thanh điều hướng , main header)-->
-     <div class="container-xxl position-relative">
-        <nav class="navbar navbar-expand-lg navbar-dark custom-bg px-4 px-lg-5 py-3 py-lg-0">
-          <a href="index.html" class="navbar-brand p-0">
-            <h1 class="text-primary m-0">
-              <img src="./assets/main-logo.png" alt="" class="me-3" style="width:150px; height:auto">
-           </h1>  
-          </a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
-          </button> 
-
-          <!-- quản lý hiển thị và ẩn nội dung của thanh điều hướng (navbar) -->
-
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0 pe-5">
-              <a href="index.html" class="nav-items nav-link active px-3">
-                <p>Home</p>
-              </a>
-              <a href="program.html" class="nav-item nav-link px-3">Program</a>
-              <a href="aboutus.html" class="nav-item nav-link px-3">About us</a>
-              <a href="contact.html" class="nav-item nav-link px-3">Contant</a>
-            </div>
-               <a href="" class="btn btn-primary py-3 px-4 align-content-center justify-content-center">
-                  Join Now
-               </a>
-          </div>
-          <div class="header__nav__social">
-            <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-dribbble-line"></i></a>
-            <a href="#"><i class="ri-instagram-fill"></i></a>
-            <a href="#"><i class="ri-youtube-fill"></i></a>
-        </div>
-        </nav>
-    </div>
-
+  <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg px-4 px-lg-5 py-3 py-lg-0">
+      <a href="index.html" class="navbar-brand p-0">
+        <h1 class="text-primary m-0">
+          <img src="./assets/main-logo.png" alt="" class="me-3" style="width:150px; height:auto">
+       </h1>  
+      </a>
   
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+      </button> 
+  
+      <!-- quản lý hiển thị và ẩn nội dung của thanh điều hướng (navbar) -->
+  
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0 pe-5">
+          <a href="index.html" class="nav-items nav-link active px-3">
+            <p>Home</p>
+          </a>
+          <a href="program.html" class="nav-item nav-link px-3">Program</a>
+          <a href="aboutus.html" class="nav-item nav-link px-3">About us</a>
+          <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
+        </div>
+           <a href="" class="btn btn-primary py-3 px-4 align-content-center justify-content-center">
+              Join Now
+           </a>
+      </div>
+      <div class="header__nav__social">
+        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-dribbble-line"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-youtube-fill"></i></a>
+    </div>
+    </nav>
+  </div>
 
 
   <!-- Main Header -->
-<div class="container-fluid py-5 custom-bg hero-header mb-5">
+<div class="container-fluid py-5 custom-bg hero-header mb-5" style="margin-top:120px">
   <div class="container my-5 py-5">
     <div class="row align-items-center g-5">
       <!-- Header Content -->
@@ -210,181 +208,187 @@
 <!-- Counter end -->
 
 
-<!-- Main 3 -->
-<section class="join-section py-5 mt-5 mb-5">
-  <h2 class="section-header text-center mb-4">WHY JOIN WITH US ?</h2>
-  <p class="section-subheader text-center mb-4">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate accusantium magnam repellat, atque delectus numquam, id natus quia veritatis, ea similique provident velit. Vitae pariatur facilis commodi, nihil earum aliquam?
-  </p>
-  <div class="join-image position-relative">
-    <img src="./assets/phonggym.jpg" alt="Join" class="img-fluid join-main-img rounded shadow-lg" />
-    <div class="join-grid position-absolute bottom-0 w-100">
-      <div class="join-card">
-        <span class="icon-container"><i class="ri-user-star-fill"></i></span>
-        <div class="join-card-content">
-          <h4>Personal Trainer</h4>
-          <p>Unlock your potential with our expert Personal Trainers.</p>
+<!-- Join-card -->
+
+
+<section class="join-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-header display-4 fw-bold">WHY JOIN WITH US?</h2>
+      <p class="section-subheader text-muted lead">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate accusantium magnam repellat, atque delectus numquam, id natus quia veritatis, ea similique provident velit. Vitae pariatur facilis commodi, nihil earum aliquam?
+      </p>
+    </div>
+
+    <div class="position-relative">
+      <img src="./assets/phonggym.jpg" alt="Join" class="img-fluid join-main-img rounded shadow-lg mx-auto d-block" />
+      
+      <div class="join-grid d-flex flex-nowrap custom-bg p-4 shadow rounded position-absolute bottom-0 start-50 translate-middle-x overflow-auto">
+        <div class="join-card flex-shrink-0 text-center border-0 mx-3">
+          <div class="icon-container bg-primary text-white rounded-circle mx-auto p-3 mb-3">
+            <i class="ri-user-star-fill fs-3"></i>
+          </div>
+          <h5 class="card-title fw-bold">Personal Trainer</h5>
+          <p class="card-text text-muted">Unlock your potential with our expert Personal Trainers.</p>
         </div>
-      </div>
-      <div class="join-card">
-        <span class="icon-container"><i class="ri-vidicon-fill"></i></span>
-        <div class="join-card-content">
-          <h4>Practice Sessions</h4>
-          <p>Elevate your fitness with practice sessions.</p>
+
+        <div class="join-card flex-shrink-0 text-center border-0 mx-3">
+          <div class="icon-container bg-success text-white rounded-circle mx-auto p-3 mb-3">
+            <i class="ri-vidicon-fill fs-3"></i>
+          </div>
+          <h5 class="card-title fw-bold">Practice Sessions</h5>
+          <p class="card-text text-muted">Elevate your fitness with practice sessions.</p>
         </div>
-      </div>
-      <div class="join-card">
-        <span class="icon-container"><i class="ri-building-line"></i></span>
-        <div class="join-card-content">
-          <h4>Good Management</h4>
-          <p>Supportive management, for your fitness success.</p>
+
+        <div class="join-card flex-shrink-0 text-center border-0 mx-3">
+          <div class="icon-container bg-danger text-white rounded-circle mx-auto p-3 mb-3">
+            <i class="ri-building-line fs-3"></i>
+          </div>
+          <h5 class="card-title fw-bold">Good Management</h5>
+          <p class="card-text text-muted">Supportive management, for your fitness success.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Join-card end -->
 
 
-<!-- Main 3 end-->
-
-
-
-<!-- Main 4 -->
-  <section class="section__container price__container">
-    <h2 class="section__header">OUR PRICING PLAN</h2>
-    <p class="section__subheader">
+<!-- Price -->
+<section class="pricing-section py-5 mb-5">
+  <div class="container text-center">
+    <!-- Header Section -->
+    <h2 class="display-4 fw-bold mb-3">OUR PRICING PLAN</h2>
+    <p class="text-muted lead mb-5">
       Our pricing plan comes with various membership tiers, each tailored to
       cater to different preferences and fitness aspirations.
     </p>
-    <div class="price__grid">
-      <div class="price__card">
-        <div class="price__card__content">
-          <h4>Basic Plan</h4>
-          <h3>$16</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
+
+    <!-- Pricing Cards -->
+    <div class="row g-4">
+      <!-- Basic Plan -->
+      <div class="col-md-4">
+        <div class="card pricing-card h-100 shadow-sm border-0">
+          <div class="card-body d-flex flex-column text-center">
+            <h4 class="card-title fw-bold mb-3 text-primary">Basic Plan</h4>
+            <h3 class="pricing-price display-6 fw-bold mb-4 text-primary">$16</h3>
+            <ul class="list-unstyled mb-4">
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>Smart workout plan</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>At home workouts</li>
+            </ul>
+            <button class="btn btn-primary w-100 mt-auto">Join Now</button>
+          </div>
         </div>
-        <button class="btn price__btn">Join Now</button>
       </div>
-      <div class="price__card">
-        <div class="price__card__content">
-          <h4>Weekly Plan</h4>
-          <h3>$25</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            PRO Gyms
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
+
+      <!-- Weekly Plan -->
+      <div class="col-md-4">
+        <div class="card pricing-card h-100 shadow-sm border-0">
+          <div class="card-body d-flex flex-column text-center">
+            <h4 class="card-title fw-bold mb-3 text-primary">Weekly Plan</h4>
+            <h3 class="pricing-price display-6 fw-bold mb-4 text-primary">$25</h3>
+            <ul class="list-unstyled mb-4">
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>PRO Gyms</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>Smart workout plan</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>At home workouts</li>
+            </ul>
+            <button class="btn btn-primary w-100 mt-auto">Join Now</button>
+          </div>
         </div>
-        <button class="btn price__btn">Join Now</button>
       </div>
-      <div class="price__card">
-        <div class="price__card__content">
-          <h4>Monthly Plan</h4>
-          <h3>$45</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            ELITE Gyms & Classes
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            PRO Gyms
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Personal Training
-          </p>
+
+      <!-- Monthly Plan -->
+      <div class="col-md-4">
+        <div class="card pricing-card h-100 shadow-lg border-primary">
+          <div class="card-body d-flex flex-column text-center">
+            <h4 class="card-title fw-bold mb-3 text-primary">Monthly Plan</h4>
+            <h3 class="pricing-price display-6 fw-bold mb-4 text-primary">$45</h3>
+            <ul class="list-unstyled mb-4">
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>ELITE Gyms & Classes</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>PRO Gyms</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>Smart workout plan</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>At home workouts</li>
+              <li><i class="ri-checkbox-circle-line text-success me-2"></i>Personal Training</li>
+            </ul>
+            <button class="btn btn-primary w-100 mt-auto">Join Now</button>
+          </div>
         </div>
-        <button class="btn price__btn">Join Now</button>
       </div>
     </div>
-  </section>
-<!-- Main 4 end-->
+  </div>
+</section>
+<!-- Price end -->
 <!-- Main end -->
+
+
  <!-- Footer -->
- <footer class="section__container footer__container">
-  <span class="bg__blur"></span>
-  <span class="bg__blur footer__blur"></span>
-  <div class="footer__col">
-    <div class="footer__logo"><img src="./assets/main-logo.png" alt="logo" /></div>
-    <p>
-      Take the first step towards a healthier, stronger you with our
-      unbeatable pricing plans. Let's sweat, achieve, and conquer together!
-    </p>
-    <div class="footer__socials">
-      <a href="#"><i class="ri-facebook-fill"></i></a>
-      <a href="#"><i class="ri-instagram-line"></i></a>
-      <a href="#"><i class="ri-twitter-fill"></i></a>
+ <footer class="footer py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Logo & About Section -->
+      <div class="col-lg-4">
+        <div class="footer-logo mb-4">
+          <img src="./assets/main-logo.png" alt="logo" class="img-fluid" style="max-width: 180px;" />
+        </div>
+        <p class="small">
+          Take the first step towards a healthier, stronger you with our unbeatable pricing plans. Let's sweat, achieve, and conquer together!
+        </p>
+        <div class="footer-socials d-flex gap-3 mt-3">
+          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
+            <i class="ri-facebook-fill"></i>
+          </a>
+          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
+            <i class="ri-twitter-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="col-lg-2">
+        <h5 class="text-uppercase mb-4">Company</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Business</a></li>
+          <li><a href="#" class="footer-link">Franchise</a></li>
+          <li><a href="#" class="footer-link">Partnership</a></li>
+          <li><a href="#" class="footer-link">Network</a></li>
+        </ul>
+      </div>
+
+      <!-- About Us Section -->
+      <div class="col-lg-2">
+        <h5 class="text-uppercase mb-4">About Us</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Blogs</a></li>
+          <li><a href="#" class="footer-link">Security</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-lg-4">
+        <h5 class="text-uppercase mb-4">Contact</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">BMI Calculator</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="footer__col">
-    <h4>Company</h4>
-    <a href="#">Business</a>
-    <a href="#">Franchise</a>
-    <a href="#">Partnership</a>
-    <a href="#">Network</a>
-  </div>
-  <div class="footer__col">
-    <h4>About Us</h4>
-    <a href="#">Blogs</a>
-    <a href="#">Security</a>
-    <a href="#">Careers</a>
-  </div>
-  <div class="footer__col">
-    <h4>Contact</h4>
-    <a href="#">Contact Us</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Conditions</a>
-    <a href="#">BMI Calculator</a>
+    <!-- Footer Bar -->
+    <div class="text-center mt-5 pt-3 border-top border-secondary">
+      <p class="mb-0 small">
+        Copyright © 2024 Web Design by Group 9. All rights reserved. Goodluck!
+      </p>
+    </div>
   </div>
 </footer>
-<div class="footer__bar">
-  Copyright © 2024 Web Design by Group 9. All rights reserved. Goodluck!
-</div>
 <!-- Footer -->
 </div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav__links');
-  
-    // Khi người dùng nhấn vào hamburger, toggle (hiển thị/ẩn) menu
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  
-    // Khi người dùng nhấn vào một vị trí khác ngoài menu, ẩn menu
-    document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('active');
-      }
-    });
-  });
-</script>
 
       <script src="./js/bootstrap.bundle.min.js"></script>
       <script src="./js/jqeuery.min.js"></script>
