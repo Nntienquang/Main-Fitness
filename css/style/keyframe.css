@@ -15,3 +15,48 @@
       transform: translateY(0); /* Card sẽ trở về vị trí ban đầu */
     }
   }
+
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Keyframes cho hiệu ứng đếm */
+@keyframes count {
+  from {
+    content: '0';
+  }
+  to {
+    content: attr(data-count);
+  }
+}
+
+/* Animation cho các card */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

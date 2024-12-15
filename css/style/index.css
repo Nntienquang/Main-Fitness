@@ -164,96 +164,7 @@ img {
 /* Main 1 end */
 /* ======= */
 /* >>>>>>> 79ae8dd6c13044af76606c9f072be005b99067e6 */
-/* Main 2 */
-.class__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
 
-.class__image {
-  position: relative;
-}
-
-.class__image .class__img-1 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  max-width: 500px;
-  border-radius: 10px;
-}
-
-.class__image .class__img-2 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.class__content {
-  padding: 2rem 0;
-}
-
-.class__content .section__header {
-  text-align: left;
-  max-width: 400px;
-}
-
-.class__content p {
-  margin-bottom: 4rem;
-  color: var(--text-light);
-}
-/* Main 2 end */
-/* Main 3 */
-.join__image {
-  margin-top: 4rem;
-  position: relative;
-}
-
-.join__image img {
-  border-radius: 10px;
-}
-
-.join__grid {
-  position: absolute;
-  bottom: -5rem;
-  width: calc(100% - 4rem);
-  padding: 2rem;
-  margin: 0 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  background-color: var(--primary-color-light);
-  border-radius: 10px;
-}
-
-.join__card {
-  flex: 1 1 250px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.join__card span {
-  padding: 5px 12px;
-  font-size: 1.75rem;
-  color: var(--white);
-  background-color: var(--secondary-color-dark);
-  border-radius: 5px;
-}
-
-.join__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--white);
-}
-
-.join__card p {
-  color: var(--text-light);
-}
-/* Main 3 end */
 
 /* Main 4  */
 .price__grid {
@@ -808,6 +719,9 @@ h2 {
 }
 
 /* Card Styles */
+.explore{
+  background-color: var(--primary-color-extra-light);
+}
 .card {
   border: none; /* Không có viền */
   border-radius: 15px; /* Bo tròn góc card */
@@ -880,9 +794,7 @@ h2 {
   color: var(--primary-color); /* Màu chữ mô tả */
   margin-bottom: 1.5rem; /* Khoảng cách dưới chữ mô tả */
 }
-.card-text:hover::before{
-  color:var(--white)
-}
+
 
 .card span i {
   font-size: 3rem; /* Kích thước icon */
@@ -914,4 +826,170 @@ h2 {
   transform: translateY(0); /* Đặt lại vị trí card */
   opacity: 1; /* Đặt độ mờ của card thành 1 */
   transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng mượt mà khi card xuất hiện */
+}
+
+
+/* Counter */
+/* Tổng quan cho section */
+.section {
+  padding: 50px 0;
+  background: linear-gradient(135deg,var(--primary-color-extra-light), var(--secondary-color)); /* Hiệu ứng nền */
+  color: #fff;
+}
+
+/* Container căn chỉnh */
+.container {
+  height: 100%; /* Đảm bảo độ cao tối ưu */
+}
+
+/* Hiệu ứng cho các item */
+.counter-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style cho số đếm */
+.counter-creative-number {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Style cho tiêu đề */
+.counter-creative-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+
+/* Hiệu ứng WOW */
+.wow {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+/* Counter end */
+
+/* Class */
+/* Phong cách cho container chính */
+.class_img-1 {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.class_img-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cột nội dung */
+.section_header {
+  margin-left:30px;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.lead {
+  color: #6c757d;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+
+/* Class end */
+/* Join-section */
+/* Đảm bảo phần tử chính trong section không phủ kín background */
+.join-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.join-image {
+  position: relative;
+  margin-top: 4rem;
+  overflow: hidden;
+}
+
+.join-main-img {
+  border-radius: 10px;
+  max-width: 100%; /* Giới hạn kích thước hình ảnh không vượt quá 100% */
+  height: auto; /* Giữ tỷ lệ cho hình ảnh */
+  object-fit: cover; /* Giữ tỷ lệ cho ảnh mà không bị biến dạng */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng zoom khi hover */
+   object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh và không phủ kín background */
+  margin: 0 auto; /* Căn giữa ảnh */
+}
+
+.join-main-img:hover {
+  transform: scale(1.05); /* Zoom hình ảnh khi hover */
+}
+
+.join-grid {
+  position: absolute;
+  bottom: -5rem; /* Đưa grid lên một chút so với phần hình ảnh */
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Nền tối cho grid */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
+
+.join-card {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.join-card:hover {
+  transform: translateY(-10px); /* Di chuyển lên khi hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng mạnh khi hover */
+}
+
+.icon-container {
+  padding: 5px 12px;
+  font-size: 1.75rem;
+  color: var(--white);
+  background-color: var(--secondary-color-dark);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.join-card:hover .icon-container {
+  transform: rotate(360deg); /* Quay icon khi hover */
+}
+
+.join-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary-color-dark);
+}
+
+.join-card p {
+  color: var(--text-light);
 }

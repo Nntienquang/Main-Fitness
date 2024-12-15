@@ -13,26 +13,24 @@ window.addEventListener("scroll", function () {
   });
 
 
-  // Hàm kiểm tra nếu phần tử đã vào vùng nhìn thấy của người dùng
-function isElementInView(element) {
-    const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-  }
-  
-  // Lấy tất cả các card
-  const cards = document.querySelectorAll('.card');
-  
-  // Kiểm tra khi cuộn trang
-  function checkCardsInView() {
-    cards.forEach(card => {
-      if (isElementInView(card)) {
-        card.classList.add('show'); // Thêm lớp 'show' khi card vào vùng nhìn thấy
+// Counter
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const updateCounter = () => {
+      const target = +counter.getAttribute("data-count");
+      const count = +counter.innerText;
+
+      // Tăng số bước chia nhỏ để giảm tốc độ
+      const increment = target / 500; // Chia nhỏ bước tăng (giá trị cao hơn sẽ giảm tốc độ)
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 30); // Tăng thời gian chờ (ms) để giảm tốc độ
+      } else {
+        counter.innerText = target;
       }
-    });
-  }
-  
-  // Lắng nghe sự kiện cuộn trang
-  window.addEventListener('scroll', checkCardsInView);
-  
-  // Kiểm tra ngay khi tải trang để các card được hiển thị ngay nếu chúng ở trong vùng nhìn thấy khi tải
-  window.addEventListener('load', checkCardsInView);
+    };
+    updateCounter();
+  });
+});
