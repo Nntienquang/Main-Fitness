@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/boxicons.min.css">
   <link rel="stylesheet" href="./css/owl.carousel.min.css">
@@ -184,42 +186,106 @@
   </div>
   <!-- End Why Choose Us Section -->
 
-  <section class="review">
-    <div class="section__container review__container">
-      <span><i class="ri-double-quotes-r"></i></span>
-      <div class="review__content">
-        <h4>MEMBER REVIEW</h4>
-        <p>
-          What truly sets this gym apart is their expert team of trainers. The
-          trainers are knowledgeable, approachable, and genuinely invested in
-          helping members achieve their fitness goals. They take the time to
-          understand individual needs and create personalized workout plans,
-          ensuring maximum results and safety.
-        </p>
-        <div class="review__rating">
-          <span><i class="ri-star-fill"></i></span>
-          <span><i class="ri-star-fill"></i></span>
-          <span><i class="ri-star-fill"></i></span>
-          <span><i class="ri-star-fill"></i></span>
-          <span><i class="ri-star-half-fill"></i></span>
+  <section class="review py-5 custom-bg">
+    <div class="container">
+      <div id="reviewCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
         </div>
-        <div class="review__footer">
-          <div class="review__member">
-            <img src="./assets/6.jpeg" alt="member" />
-            <div class="review__member__details">
-              <h4>Jane Cooper</h4>
-              <p>Software Developer</p>
+  
+        <!-- Carousel Items -->
+        <div class="carousel-inner custom-bg">
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <div class="review__content text-center">
+              <span class="d-block mb-4"><i class="ri-double-quotes-r display-4 text-primary"></i></span>
+              <h4 class="fw-bold mb-3">MEMBER REVIEW</h4>
+              <p class="text-light mb-4">
+                What truly sets this gym apart is their expert team of trainers. The trainers are knowledgeable,
+                approachable, and genuinely invested in helping members achieve their fitness goals.
+              </p>
+              <div class="review__rating mb-4">
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-half-fill text-warning"></i></span>
+              </div>
+              <div class="review__footer d-flex justify-content-center align-items-center">
+                <div class="review__member d-flex align-items-center">
+                  <img src="./assets/about2.jpg" alt="member" class="rounded-circle me-3" style="width: 60px; height: 60px" />
+                  <div class="review__member__details text-start">
+                    <h5 class="mb-0">Jane Cooper</h5>
+                    <p class="text-muted mb-0">Software Developer</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="review__nav">
-            <span><i class="ri-arrow-left-line"></i></span>
-            <span><i class="ri-arrow-right-line"></i></span>
+  
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="review__content text-center">
+              <span class="d-block mb-4"><i class="ri-double-quotes-r display-4 text-primary"></i></span>
+              <h4 class="fw-bold mb-3">MEMBER REVIEW</h4>
+              <p class="text-light mb-4">
+                I've been a member of many gyms, but this one stands out because of its positive and welcoming atmosphere.
+              </p>
+              <div class="review__rating mb-4">
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+              </div>
+              <div class="review__footer d-flex justify-content-center align-items-center">
+                <div class="review__member d-flex align-items-center">
+                  <img src="./assets/about3.jpg" alt="member" class="rounded-circle me-3" style="width: 60px; height: 60px" />
+                  <div class="review__member__details text-start">
+                    <h5 class="mb-0">John Doe</h5>
+                    <p class="text-muted mb-0">Fitness Enthusiast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <div class="review__content text-center">
+              <span class="d-block mb-4"><i class="ri-double-quotes-r display-4 text-primary"></i></span>
+              <h4 class="fw-bold mb-3">MEMBER REVIEW</h4>
+              <p class="text-light mb-4">
+                The facilities are top-notch, and the equipment is always well-maintained. Highly recommend this gym!
+              </p>
+              <div class="review__rating mb-4">
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+                <span><i class="ri-star-fill text-warning"></i></span>
+              </div>
+              <div class="review__footer d-flex justify-content-center align-items-center">
+                <div class="review__member d-flex align-items-center">
+                  <img src="./assets/about4.jpg" alt="member" class="rounded-circle me-3" style="width: 60px; height: 60px" />
+                  <div class="review__member__details text-start">
+                    <h5 class="mb-0">Emily Stone</h5>
+                    <p class="text-muted mb-0">Personal Trainer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  
+  
+  
  <!-- Footer -->
  <footer class="footer py-5 bg-dark text-light">
   <div class="container">
@@ -286,6 +352,6 @@
   </div>
 </footer>
 <!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

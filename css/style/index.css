@@ -55,25 +55,15 @@ a {
 /*** Button ***/
 .btn {
   font-family: 'Nunito', sans-serif;
-  font-weight: 600;
   text-transform: uppercase;
   transition: .5s;
 }
 
-.btn.btn-primary,
-.btn.btn-secondary {
+.btn.btn-primary
+{
   color: #ffffff;
 }
 
-.btn-square {
-  width: 45px;
-  height: 45px;
-}
-
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
-}
 
 /* Hình ảnh */
 img {
@@ -84,23 +74,6 @@ img {
 /* Màu nền chính */
 .custom-bg{
   background-color: var(--primary-color-light);
-}
-
-
-.custom-text{
-  color: var(--secondary-color);
-}
-.custom-text-h1{
-  color: var(--white);
-  font-weight: 800;
-}
-.custom-text-span{
-  color: var(--primary-color);
-  font-weight: 800;
-  -webkit-text-stroke:2px white;
-}
-.custom-text-p{
-  color: var(--text-light);
 }
 /* Phần chung end*/
 
@@ -253,6 +226,22 @@ img {
 
 .hero-header img {
   animation: quay 50s linear infinite;
+}
+
+.custom-text{
+  color: var(--secondary-color);
+}
+.custom-text-h1{
+  color: var(--white);
+  font-weight: 800;
+}
+.custom-text-span{
+  color: var(--primary-color);
+  font-weight: 800;
+  -webkit-text-stroke:2px white;
+}
+.custom-text-p{
+  color: var(--text-light);
 }
 
 /* Center the header */

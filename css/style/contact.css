@@ -46,34 +46,19 @@ a {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--secondary-color-dark);
-}
-
-/*** Button ***/
-.btn {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   transition: .5s;
 }
-
-.btn.btn-primary,
-.btn.btn-secondary {
+.btn:hover {
+  background-color: var(--secondary-color-dark);
+}
+.btn.btn-primary{
   color: #ffffff;
 }
 
-.btn-square {
-  width: 45px;
-  height: 45px;
-}
 
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
-}
 
 /* Hình ảnh */
 img {

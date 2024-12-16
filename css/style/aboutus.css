@@ -46,35 +46,18 @@ a {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color var(--transition);
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  transition: .5s;
 }
 
 .btn:hover {
   background-color: var(--secondary-color-dark);
 }
-
-/*** Button ***/
-.btn {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: .5s;
-}
-
-.btn.btn-primary,
-.btn.btn-secondary {
+.btn.btn-primary
+{
   color: #ffffff;
 }
-
-.btn-square {
-  width: 45px;
-  height: 45px;
-}
-
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
-}
-
 /* Hình ảnh */
 img {
   width: 100%;
@@ -85,24 +68,8 @@ img {
 .custom-bg{
   background-color: var(--primary-color-light);
 }
-
-
-.custom-text{
-  color: var(--secondary-color);
-}
-.custom-text-h1{
-  color: var(--white);
-  font-weight: 800;
-}
-.custom-text-span{
-  color: var(--primary-color);
-  font-weight: 800;
-  -webkit-text-stroke:2px white;
-}
-.custom-text-p{
-  color: var(--text-light);
-}
 /* Phần chung end*/
+
 /*** Navbar ***/
 /* Thanh Navbar chính */
 .navbar {
@@ -269,81 +236,35 @@ img {
     line-height: 2;
     margin-bottom:35px
   }
-  /* Review about us */
-  .review {
-    background-color: var(--primary-color-light);
-  }
-  
-  .review__container {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .review__container > span {
-    font-size: 6rem;
-    color: var(--secondary-color);
-    opacity: 0.5;
-  }
-  
+  /* end */
+
   .review__content {
-    flex: 1;
-  }
-  
-  .review__content h4 {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--white);
-  }
-  
-  .review__content p {
     max-width: 800px;
-    margin-bottom: 2rem;
-    color: var(--text-light);
-  }
-  
-  .review__rating span {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-  }
-  
-  .review__footer {
-    margin-top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .review__member {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    margin: auto;
   }
   
   .review__member img {
-    max-width: 60px;
-    border-radius: 100%;
+    border: 2px solid var(--primary-color-light);
   }
   
-  .review__member__details h4 {
-    margin-bottom: 0;
+  .review__rating span {
+    font-size: 1.25rem;
   }
   
-  .review__nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+  .carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
   }
   
-  .review__nav span {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    cursor: pointer;
+  .carousel-fade .carousel-item.active {
+    opacity: 1;
   }
   
-  /* end */
-
+  
  /* Footer Styling */
 .footer {
   background: linear-gradient(145deg, var(--primary-color-extra-light), var(--primary-color-light));

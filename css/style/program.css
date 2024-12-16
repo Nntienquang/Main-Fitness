@@ -85,23 +85,6 @@ img {
 .custom-bg{
   background-color: var(--primary-color-light);
 }
-
-
-.custom-text{
-  color: var(--secondary-color);
-}
-.custom-text-h1{
-  color: var(--white);
-  font-weight: 800;
-}
-.custom-text-span{
-  color: var(--primary-color);
-  font-weight: 800;
-  -webkit-text-stroke:2px white;
-}
-.custom-text-p{
-  color: var(--text-light);
-}
 /* Phần chung end*/
 /*** Navbar ***/
 /* Thanh Navbar chính */
