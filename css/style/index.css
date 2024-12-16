@@ -46,24 +46,19 @@ a {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color var(--transition);
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  transition: .5s;
 }
 
 .btn:hover {
   background-color: var(--secondary-color-dark);
 }
 
-/*** Button ***/
-.btn {
-  font-family: 'Nunito', sans-serif;
-  text-transform: uppercase;
-  transition: .5s;
-}
-
 .btn.btn-primary
 {
   color: #ffffff;
 }
-
 
 /* Hình ảnh */
 img {

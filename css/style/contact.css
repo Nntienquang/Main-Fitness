@@ -47,18 +47,18 @@ a {
   cursor: pointer;
   transition: background-color var(--transition);
   font-family: 'Nunito', sans-serif;
-  font-weight: 600;
   text-transform: uppercase;
   transition: .5s;
 }
+
 .btn:hover {
   background-color: var(--secondary-color-dark);
 }
-.btn.btn-primary{
+
+.btn.btn-primary
+{
   color: #ffffff;
 }
-
-
 
 /* Hình ảnh */
 img {
@@ -69,23 +69,6 @@ img {
 /* Màu nền chính */
 .custom-bg{
   background-color: var(--primary-color-light);
-}
-
-
-.custom-text{
-  color: var(--secondary-color);
-}
-.custom-text-h1{
-  color: var(--white);
-  font-weight: 800;
-}
-.custom-text-span{
-  color: var(--primary-color);
-  font-weight: 800;
-  -webkit-text-stroke:2px white;
-}
-.custom-text-p{
-  color: var(--text-light);
 }
 /* Phần chung end*/
 
@@ -205,7 +188,6 @@ img {
   max-height: 100px;
   transition: 0.5s;
 }
-
 
 
 /*Team*/
