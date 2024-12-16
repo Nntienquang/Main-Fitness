@@ -54,12 +54,10 @@ a {
 .btn:hover {
   background-color: var(--secondary-color-dark);
 }
-
 .btn.btn-primary
 {
   color: #ffffff;
 }
-
 /* Hình ảnh */
 img {
   width: 100%;
@@ -188,7 +186,6 @@ img {
   max-height: 100px;
   transition: 0.5s;
 }
-
 
 /*Team*/
 .team span::after {
