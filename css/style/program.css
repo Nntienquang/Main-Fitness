@@ -307,103 +307,152 @@ h2 {
 }
 
 
-.order{
-    width: 100%;
-    height: auto;
-    padding: 70px 20px;
-    background-image: url(image/bg2.jpg);
-    background-size: cover;
-    background-position: center;
-    overflow:hidden;
-    box-sizing: border-box;
-  }
-  
-  .order h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffeeee;
-    font-size: 55px;
-    margin-bottom:30px;
-  }
-  
-  .order h1 span{
-    color: hsl(213, 82%, 63%);
-    margin-right: 15px;
-    font-family: mv boli;
-  }
-  
-  .order h1 span::after{
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #31a3fa;
-    display: block;
-    position: relative;
-    bottom: 15px;
-  }
-  
-  .order .order_main{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap:30px;
-  }
-  
-  .order .order_main .order_image img{
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .order .order_main form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  .order .order_main form .input p{
-    line-height: 25px;
-    color:white;
-    width: 100%;
-    box-sizing: border-box;/* tránh tràn */
-  }
-  
-  .order .order_main form .input{
-    margin: 5px;
-  }
-  
-  .order .order_main form .input input{
-    width: 300px;
-    height: 35px;
-    padding: 0 10px;
-    border: 2px solid #0073ff;
-    background: #fff6f6;
-    outline: none;
-    /* bỏ viền ngoài khi có :focus */
-    border-radius: 3px;
-  }
-  
-  .order .order_main form .input input:focus{
-    border: 2px solid #ffffff;
-  }
-  
-  .order .order_main form .order_btn{
-    padding: 10px 0;
-    background: #6179d7;
-    color: white;
-    width: 40%;
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  .order .order_main form .order_btn:hover{
-    background-color: #00ccff;
-    transition: 1s;
-  }
+Classes Time Table Section
+-----------------------*/
+
+.classtime-section {
+	background: #151515;
+	padding-top: 90px;
+}
+
+.classtime-section .section-title {
+	margin-bottom: 48px;
+}
+
+.timetable-controls {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.timetable-controls ul li {
+	list-style: none;
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	color: #ffffff;
+	display: inline-block;
+	margin-right: 80px;
+	cursor: pointer;
+	position: relative;
+}
+
+.timetable-controls ul li.active {
+	color: #e4381C;
+}
+
+.timetable-controls ul li.active:after {
+	opacity: 1;
+}
+
+.timetable-controls ul li:after {
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	width: 100%;
+	height: 2px;
+	background: #e4381C;
+	content: "";
+	opacity: 0;
+}
+
+.timetable-controls ul li:last-child {
+	margin-right: 0;
+}
+
+.classtime-table .ts-item {
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.classtime-table.filtering .ts-item {
+	opacity: 0;
+}
+
+.classtime-table.filtering .ts-item.show {
+	opacity: 1;
+}
+
+.classtime-table table {
+	width: 100%;
+	border: 1px solid #1f1f1f;
+	background: #212121;
+	text-align: center;
+}
+
+.classtime-table table thead tr th {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	padding: 25px 5px;
+}
+
+.classtime-table table tbody {
+	border-top: 1px solid #171717;
+}
+
+.classtime-table table tbody tr td {
+	text-align: center;
+	border-right: 1px solid #171717;
+	border-bottom: 1px solid #171717;
+	width: 146px;
+	padding: 26px 10px 28px;
+	position: relative;
+	z-index: 1;
+}
+
+.classtime-table table tbody tr td:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, right top, from(#e16521), to(#e4381C));
+	background: -o-linear-gradient(left, #e16521, #e4381C);
+	background: linear-gradient(to right, #e16521, #e4381C);
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.classtime-table table tbody tr td.hover-bg:hover:after {
+	opacity: 1;
+}
+
+.classtime-table table tbody tr td.hover-bg:hover h6 {
+	color: #ffffff;
+}
+
+.classtime-table table tbody tr td.workout-time {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	font-family: "Oswald", sans-serif;
+}
+
+.classtime-table table tbody tr td span {
+	font-size: 16px;
+	color: #ffffff;
+	display: block;
+	margin-bottom: 7px;
+}
+
+.classtime-table table tbody tr td h6 {
+	color: #e4381C;
+	font-weight: 500;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/*---------------------
 
 /* Footer Styling */
 .footer {
