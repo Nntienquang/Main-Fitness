@@ -307,8 +307,8 @@ h2 {
 }
 
 
-Classes Time Table Section
------------------------*/
+/* Classes Time Table Section
+-----------------------*/   
 
 .classtime-section {
 	background: #151515;
@@ -451,6 +451,55 @@ Classes Time Table Section
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
+/* Thêm thanh cuộn ngang cho bảng */
+.classtime-table {
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  -webkit-overflow-scrolling: touch; /* Cuộn mượt trên thiết bị di động */
+}
+
+.classtime-table table {
+  min-width: 1000px; /* Đảm bảo bảng đủ rộng để hiển thị đẹp */
+  border-collapse: collapse; /* Gộp đường viền bảng */
+}
+
+.classtime-table table tbody tr td,
+.classtime-table table thead tr th {
+  white-space: nowrap; /* Ngăn text trong ô bị xuống dòng */
+}
+
+
+.timetable-controls ul {
+  display: flex; /* Hiển thị các mục trên cùng một hàng */
+  justify-content: space-between; /* Căn đều các mục */
+  flex-wrap: nowrap; /* Không cho phép xuống dòng */
+  overflow-x: auto; /* Thêm thanh cuộn ngang khi nội dung quá dài */
+  white-space: nowrap; /* Ngăn các mục bị ngắt dòng */
+  padding: 0;
+  margin: 0;
+}
+
+.timetable-controls ul li {
+  list-style: none;
+  font-size: 14px; /* Giảm kích thước chữ nếu cần */
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 30px; /* Khoảng cách giữa các mục */
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0; /* Không cho phép mục bị thu nhỏ */
+}
+
+.timetable-controls ul li:last-child {
+  margin-right: 0; /* Loại bỏ khoảng cách cho mục cuối cùng */
+}
+
+.timetable-controls {
+  overflow: hidden; /* Ẩn thanh cuộn dọc nếu có */
+  margin-bottom: 20px;
+}
+
 
 /*---------------------
 
