@@ -410,7 +410,7 @@ h2 {
 	width: 100%;
 	height: 100%;
 	background: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), to(var(--primary-color-light)));
-	background: linear-gradient(left,var(--primary-color-light), var(--secondary-color));
+	background: linear-gradient(left,var(--primary-color-light), var(--secondary-color));   
 	background: linear-gradient(to right, var(--primary-color-light), var(--secondary-color));
 	content: "";
 	opacity: 0;
@@ -446,7 +446,6 @@ h2 {
 	font-weight: 500;
 	text-transform: uppercase;
 	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -472,7 +471,7 @@ h2 {
   justify-content: space-between; /* Căn đều các mục */
   flex-wrap: nowrap; /* Không cho phép xuống dòng */
   overflow-x: auto; /* Thêm thanh cuộn ngang khi nội dung quá dài */
-  white-space: nowrap; /* Ngăn các mục bị ngắt dòng */
+  white-space: nowrap; /* Ngăn các mục bị xuông dòng  khi tràn*/
   padding: 0;
   margin: 0;
 }
@@ -486,7 +485,7 @@ h2 {
   margin-right: 30px; /* Khoảng cách giữa các mục */
   cursor: pointer;
   position: relative;
-  flex-shrink: 0; /* Không cho phép mục bị thu nhỏ */
+  flex-shrink: 0; /* phần tử không thu nhỏ dù không gian của container bị hạn chế. */
 }
 
 .timetable-controls ul li:last-child {
@@ -509,6 +508,7 @@ h2 {
 .footer-logo img {
   max-width: 150px;
   transition: transform 0.3s ease-in-out;
+  /* transform: Chỉ định thuộc tính sẽ được áp dụng hiệu ứng chuyển đổi (ở đây là các biến đổi như xoay, dịch chuyển, phóng to/thu nhỏ, v.v.). */
 }
 
 .footer-logo img:hover {
