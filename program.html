@@ -25,53 +25,18 @@
 </head>
 <body>
 
-<!-- Header Section Begin -->
-  <!-- Navbar & main (Thanh điều hướng , main header)-->
-  <div class="container-xxl">
-    <nav class="navbar navbar-expand-lg navbar-dark custom-bg px-4 px-lg-5 py-3 py-lg-0">
-      <a href="index.html" class="navbar-brand p-0">
-        <h1 class="text-primary m-0">
-          <img src="./assets/main-logo.png" alt="" class="me-3" style="width:150px; height:auto">
-       </h1>  
-      </a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars"></span>
-      </button> 
-  
-      <!-- quản lý hiển thị và ẩn nội dung của thanh điều hướng (navbar) -->
-  
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0 pe-5">
-          <a href="index.html" class="nav-items nav-link active px-3">
-            <p>Home</p>
-          </a>
-          <a href="program.html" class="nav-item nav-link px-3">Program</a>
-          <a href="aboutus.html" class="nav-item nav-link px-3">About us</a>
-          <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
-        </div>
-           <a href="" class="btn btn-primary py-3 px-4 align-content-center justify-content-center" onclick="alert('Cảm ơn bạn điền')">
-              Join Now
-           </a>
-      </div>
-      <div class="header__nav__social">
-        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-        <a href="#"><i class="ri-twitter-fill"></i></a>
-        <a href="#"><i class="ri-dribbble-line"></i></a>
-        <a href="#"><i class="ri-instagram-fill"></i></a>
-        <a href="#"><i class="ri-youtube-fill"></i></a>
-    </div>
-    </nav>
-  </div>
+<!-- navbar -->
+<div data-include="header.html"></div>
+<!-- navbar end -->
 
-  <section class="container py-5" style="margin-top:120px">
     <!-- Explore Header -->
+  <section class="container py-5" style="margin-top:120px">
     <div class="d-flex justify-content-center align-items-center mb-4">
       <h2 class="mb-0">Explore Our Program</h2>
     </div>
   
-    <!-- Explore Grid (4 columns with Bootstrap Grid system) -->
     <div class="row g-4">
+
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card text-center">
           <div class="card-body">
@@ -82,6 +47,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card text-center">
           <div class="card-body">
@@ -92,6 +58,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card text-center">
           <div class="card-body">
@@ -102,6 +69,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card text-center">
           <div class="card-body">
@@ -112,13 +80,16 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 <!-- Explore end -->
 
  <!-- Class Time Section Begin -->
  <section class="classtime-section class-time-table spad mb-5 mt-5">
+
   <div class="container">
+
       <div class="row">
           <div class="col-lg-12 text-center">
               <div class="section-title">
@@ -129,6 +100,7 @@
 
       <!-- data-tsfilter="all": Thuộc tính data-* dùng cho JavaScript để lọc nội dung (ở đây là tất cả các lớp). -->
       <div class="row">
+
           <div class="col-lg-12">
               <div class="timetable-controls">
                   <ul>
@@ -141,6 +113,7 @@
                   </ul>
               </div>
           </div>
+
       </div>
       <!-- Thead: phần đầu của bảng chứa tiêu đề cột -->
       <!-- th: tiêu đề của mỗi cột -->
@@ -158,6 +131,7 @@
                       <th>Sunday</th>
                   </tr>
               </thead>
+
               <tbody>
                   <tr>
                       <td class="workout-time">10.00</td>
@@ -181,6 +155,7 @@
                           <h6>Lunge Ball Bur</h6>
                       </td>
                   </tr>
+
                   <tr>
                       <td class="workout-time">14.00</td>
                       <td></td>
@@ -200,6 +175,7 @@
                       </td>
                       <td></td>
                   </tr>
+
                   <tr>
                       <td class="workout-time">16.00</td>
                       <td class="hover-bg ts-item" data-tsmeta="lunge">
@@ -225,6 +201,7 @@
                           <h6>murph</h6>
                       </td>
                   </tr>
+
                   <tr>
                       <td class="workout-time">18.00</td>
                       <td class="hover-bg ts-item" data-tsmeta="walls">
@@ -247,6 +224,7 @@
                       </td>
                       <td></td>
                   </tr>
+
                   <tr>
                       <td class="workout-time">20.00</td>
                       <td class="hover-bg ts-item" data-tsmeta="lunge">
@@ -272,6 +250,7 @@
                           <h6>Crossfit Lv2</h6>
                       </td>
                   </tr>
+                  
               </tbody>
           </table>
       </div>
@@ -280,70 +259,7 @@
 <!-- Class Time Section End -->
 
  <!-- Footer -->
- <footer class="footer py-5 bg-dark text-light">
-  <div class="container">
-    <div class="row gy-4">
-      <!-- Logo & About Section -->
-      <div class="col-lg-4">
-        <div class="footer-logo mb-4">
-          <img src="./assets/main-logo.png" alt="logo" class="img-fluid" style="max-width: 180px;" />
-        </div>
-        <p class="small">
-          Take the first step towards a healthier, stronger you with our unbeatable pricing plans. Let's sweat, achieve, and conquer together!
-        </p>
-        <div class="footer-socials d-flex gap-3 mt-3">
-          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
-            <i class="ri-facebook-fill"></i>
-          </a>
-          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
-            <i class="ri-instagram-line"></i>
-          </a>
-          <a href="#" class="btn btn-outline-light btn-social rounded-circle">
-            <i class="ri-twitter-fill"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Quick Links Section -->
-      <div class="col-lg-2">
-        <h5 class="text-uppercase mb-4">Company</h5>
-        <ul class="list-unstyled small">
-          <li><a href="#" class="footer-link">Business</a></li>
-          <li><a href="#" class="footer-link">Franchise</a></li>
-          <li><a href="#" class="footer-link">Partnership</a></li>
-          <li><a href="#" class="footer-link">Network</a></li>
-        </ul>
-      </div>
-
-      <!-- About Us Section -->
-      <div class="col-lg-2">
-        <h5 class="text-uppercase mb-4">About Us</h5>
-        <ul class="list-unstyled small">
-          <li><a href="#" class="footer-link">Blogs</a></li>
-          <li><a href="#" class="footer-link">Security</a></li>
-          <li><a href="#" class="footer-link">Careers</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Section -->
-      <div class="col-lg-4">
-        <h5 class="text-uppercase mb-4">Contact</h5>
-        <ul class="list-unstyled small">
-          <li><a href="#" class="footer-link">Contact Us</a></li>
-          <li><a href="#" class="footer-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
-          <li><a href="#" class="footer-link">BMI Calculator</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Footer Bar -->
-    <div class="text-center mt-5 pt-3 border-top border-secondary">
-      <p class="mb-0 small">
-        Copyright © 2024 Web Design by Group 9. All rights reserved. Goodluck!
-      </p>
-    </div>
-  </div>
-</footer>
+ <div data-include="/footer.html"></div>
 <!-- Footer -->
 
 
