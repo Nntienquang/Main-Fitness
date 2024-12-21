@@ -568,7 +568,10 @@ h2 {
 
 /* Footer Styling */
 .footer {
-  background: linear-gradient(145deg, var(--primary-color-extra-light), var(--primary-color-light));
+  background: linear-gradient(145deg, var(--primary-color-light), var(--primary-color-extra-light));
+  color: #ddd;
+  position: relative;
+  padding-top: 50px;
 }
 
 .footer-logo img {
@@ -577,8 +580,9 @@ h2 {
 }
 
 .footer-logo img:hover {
-  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+  transform: scale(1.1);
 }
+
 .footer-link {
   color: #bbb;
   text-decoration: none;
@@ -586,7 +590,7 @@ h2 {
 }
 
 .footer-link:hover {
-  color: var(--secondary-color);
+  color: #007bff;
   text-decoration: underline;
 }
 
@@ -594,20 +598,34 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   font-size: 1.2rem;
   border: 2px solid #bbb;
+  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .footer-socials .btn-social:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #007bff;
+  color: #fff;
   transform: scale(1.1);
+}
+
+.newsletter input {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
 .footer-bar {
   color: #aaa;
   font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
 }

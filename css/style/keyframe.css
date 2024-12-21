@@ -1,3 +1,20 @@
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite
+}
+
+.animated.hinge {
+  animation-duration: 2s
+}
+
+.animated.bounceIn,.animated.bounceOut,.animated.flipOutX,.animated.flipOutY {
+  animation-duration: .75s
+}
+
 /* infinite: Lặp lại liên tục */
 @keyframes quay { 
     100% { 
@@ -5,60 +22,64 @@
     } 
   }
   
-  @keyframes slideInBottom {
+  @keyframes slideInDown {
     0% {
-      opacity: 0; /* Ban đầu độ mờ là 0 */
-      transform: translateY(20px); /* Ban đầu di chuyển card xuống dưới */
+        transform: translate3d(0,-100%,0);
+        visibility: visible
     }
-    100% {
-      opacity: 1; /* Khi animation hoàn tất, độ mờ là 1 */
-      transform: translateY(0); /* Card sẽ trở về vị trí ban đầu */
-    }
-  }
 
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
+    to {
+        transform: translateZ(0)
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Keyframes cho hiệu ứng đếm */
-@keyframes count {
-  from {
-    content: '0';
-  }
-  to {
-    content: attr(data-count);
-  }
 }
 
-/* Animation cho các card */
+.slideInDown {
+    animation-name: slideInDown
+}
+
 @keyframes slideInLeft {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translate3d(-100%,0,0);
+        visibility: visible
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.slideInLeft {
+    animation-name: slideInLeft
 }
 
 @keyframes slideInRight {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translate3d(100%,0,0);
+        visibility: visible
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.slideInRight {
+    animation-name: slideInRight
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translate3d(0,100%,0);
+        visibility: visible
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+.slideInUp {
+    animation-name: slideInUp
 }
 
 

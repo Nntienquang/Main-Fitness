@@ -498,8 +498,6 @@ h2 {
 }
 
 
-/*---------------------
-
 /* Footer Styling */
 .footer {
   background: linear-gradient(145deg, var(--primary-color-extra-light), var(--primary-color-light));
@@ -508,7 +506,6 @@ h2 {
 .footer-logo img {
   max-width: 150px;
   transition: transform 0.3s ease-in-out;
-  /* transform: Chỉ định thuộc tính sẽ được áp dụng hiệu ứng chuyển đổi (ở đây là các biến đổi như xoay, dịch chuyển, phóng to/thu nhỏ, v.v.). */
 }
 
 .footer-logo img:hover {

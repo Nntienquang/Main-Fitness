@@ -54,3 +54,26 @@ $('.timetable-controls ul li').on('click', function() {
         }
     });
 });
+
+function loadHTML() {
+  const elements = document.querySelectorAll("[data-include]");
+
+  elements.forEach(async (el) => {
+    const file = el.getAttribute("data-include");
+    if (file) {
+      try {
+        const response = await fetch(file);
+        if (response.ok) {
+          const content = await response.text();
+          el.innerHTML = content;
+        } else {
+          el.innerHTML = "Error loading file.";
+        }
+      } catch (error) {
+        el.innerHTML = "Error loading file.";
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", loadHTML);
