@@ -239,20 +239,14 @@ img {
   color: var(--text-light);
 }
 
-/* Center the header */
-.explore-cards {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;  /* Optional: space between the cards */
-}
-
+/* Explore our program */
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 2px;
   margin-bottom: 0;
-  text-align: center; /* Centering text */
+  text-align: center; 
 }
 
 /* Card Styles */
@@ -260,11 +254,11 @@ h2 {
   background-color: var(--primary-color-extra-light);
 }
 .card {
-  border: none; /* Không có viền */
-  border-radius: 15px; /* Bo tròn góc card */
-  overflow: hidden; /* Ẩn phần vượt ra ngoài card */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho card */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  border: none; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
   position: relative; /* Để hiệu ứng nền được áp dụng đúng */
 }
 
@@ -273,15 +267,15 @@ h2 {
   content: ''; /* Tạo phần giả trước card để áp dụng nền */
   position: absolute; /* Định vị vị trí tuyệt đối của phần nền */
   top: 0; left: 0; right: 0; bottom: 0; /* Chiếm toàn bộ không gian của card */
-  background-size: cover; /* Căng hình nền ra toàn bộ card */
-  background-position: center; /* Căn giữa hình nền */
-  opacity: 0.4; /* Làm mờ hình nền một chút */
+  background-size: cover; 
+  background-position: center; 
+  opacity: 0.4; 
   z-index: -1; /* Đưa hình nền xuống dưới các nội dung của card */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng mượt mà khi hover */
   
 }
 
-/* Đặt hình nền cho từng card */
+
 .card:nth-child(1)::before {
   background-image: url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltbWVyfGVufDB8fDB8fHww); /* Hình nền cho card 1 */
   background-repeat: no-repeat;
@@ -293,93 +287,89 @@ h2 {
 }
 
 .card:nth-child(3)::before {
-  background-image: url('/assets/3.png'); /* Hình nền cho card 3 */
+  background-image: url('/assets/3.png'); 
   background-repeat: no-repeat;
 }
 
 .card:nth-child(4)::before {
-  background-image: url('/assets/6.jpeg'); /* Hình nền cho card 4 */
+  background-image: url('/assets/6.jpeg'); 
   background-repeat: no-repeat;
 }
 
-/* Hiệu ứng khi hover vào card */
+
 .card:hover {
-  transform: translateY(-10px); /* Di chuyển card lên một chút */
-  box-shadow: 0 6px 20px rgb(255, 255, 255); /* Tăng cường hiệu ứng bóng đổ */
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 20px rgb(255, 255, 255);
 }
 
-/* Hiệu ứng hình nền khi hover vào card */
 .card:hover::before {
-  opacity: 0.6; /* Tăng độ sáng của hình nền khi hover */
-  transform: scale(1.05); /* Phóng to hình nền một chút khi hover */
-
+  opacity: 0.6; 
+  transform: scale(1.05); 
 }
-
-/* Các kiểu khác cho card */
 .card-body {
-  padding: 2rem; /* Thêm khoảng cách bên trong card */
+  padding: 2rem; 
 }
 
 .card-title {
-  font-size: 1.5rem; /* Kích thước chữ tiêu đề */
-  font-weight: 600; /* Đậm tiêu đề */
-  color: #333; /* Màu chữ tiêu đề */
+  font-size: 1.5rem; 
+  font-weight: 600; 
+  color: #333; 
 }
 
 .card-text {
-  font-size: 1rem; /* Kích thước chữ mô tả */
-  color: var(--primary-color); /* Màu chữ mô tả */
-  margin-bottom: 1.5rem; /* Khoảng cách dưới chữ mô tả */
+  font-size: 1rem; 
+  color: var(--primary-color); 
+  margin-bottom: 1.5rem; 
 }
 
 
 .card span i {
-  font-size: 3rem; /* Kích thước icon */
-  color: var(--secondary-color-dark); /* Màu của icon */
-  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu cho icon */
+  font-size: 3rem; 
+  color: var(--secondary-color-dark); 
+  transition: color 0.3s ease; 
 }
 
 .card span i:hover {
-  color: var(--secondary-color); /* Đổi màu khi hover vào icon */
+  color: var(--secondary-color); 
 }
 
-/* Nút bên trong card */
+
 .card .btn-primary {
-  background-color: var(--secondary-color); /* Màu nền của nút */
-  color: white; /* Màu chữ của nút */
-  border-radius: 25px; /* Bo tròn góc nút */
-  padding: 10px 20px; /* Khoảng cách bên trong nút */
-  font-weight: bold; /* Chữ in đậm */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt mà khi hover vào nút */
+  background-color: var(--secondary-color); 
+  color: white; 
+  border-radius: 25px; 
+  padding: 10px 20px; 
+  font-weight: bold; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .card .btn-primary:hover {
-  background-color: var(--primary-color-light); /* Màu nền của nút khi hover */
-  transform: translateY(-5px); /* Đẩy nút lên một chút khi hover */
+  background-color: var(--primary-color-light); 
+  transform: translateY(-5px); 
 }
 
-/* Hiệu ứng khi card xuất hiện */
+
 .card.animate-card {
-  transform: translateY(0); /* Đặt lại vị trí card */
-  opacity: 1; /* Đặt độ mờ của card thành 1 */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng mượt mà khi card xuất hiện */
+  transform: translateY(0); 
+  opacity: 1; 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
 }
 
 
 /* Counter */
-/* Tổng quan cho section */
+
 .section {
   padding: 50px 0;
-  background: linear-gradient(135deg,var(--primary-color-extra-light), var(--secondary-color)); /* Hiệu ứng nền */
+  background: linear-gradient(135deg,var(--primary-color-extra-light), var(--secondary-color)); 
   color: #fff;
 }
 
-/* Container căn chỉnh */
+
 .container {
-  height: 100%; /* Đảm bảo độ cao tối ưu */
+  height: 100%; 
 }
 
-/* Hiệu ứng cho các item */
+
 .counter-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -389,7 +379,7 @@ h2 {
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.375);
 }
 
-/* Style cho số đếm */
+
 .counter-creative-number {
   font-size: 48px;
   font-weight: bold;
@@ -398,7 +388,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Style cho tiêu đề */
+
 .counter-creative-title {
   font-size: 18px;
   font-weight: 600;
@@ -406,12 +396,6 @@ h2 {
   color: #e0e0e0;
 }
 
-/* Hiệu ứng WOW */
-.wow {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-in-out forwards;
-}
 /* Counter end */
 
 /* Class */
