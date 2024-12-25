@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
 
 // Counter
 document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter");
+const counters = document.querySelectorAll(".counter");
   counters.forEach(counter => {
     const updateCounter = () => {
       const target = +counter.getAttribute("data-count");
