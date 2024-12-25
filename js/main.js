@@ -75,5 +75,139 @@ function loadHTML() {
     }
   });
 }
-
 document.addEventListener("DOMContentLoaded", loadHTML);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Lấy các phần tử cần thiết
+  const openFormButton = document.getElementById('openForm');
+  const closeFormButton = document.getElementById('closeForm');
+  const registerForm = document.getElementById('registerForm');
+  const registrationForm = document.getElementById('registrationForm');
+  const formMessage = document.getElementById('formMessage');
+
+  // Mở form khi nhấn nút Register
+  if (openFormButton) {
+      openFormButton.addEventListener('click', function () {
+          if (registerForm) {
+              registerForm.style.display = 'flex'; // Hiển thị form
+              document.body.classList.add('modal-open'); // Ngừng cuộn trang
+          }
+      });
+  }
+
+  // Đóng form khi nhấn vào nút đóng (x)
+  if (closeFormButton) {
+      closeFormButton.addEventListener('click', function () {
+          if (registerForm) {
+              registerForm.style.display = 'none'; // Ẩn form
+              document.body.classList.remove('modal-open'); // Khôi phục cuộn trang
+          }
+      });
+  }
+
+  // Đóng form khi nhấn bên ngoài form (chỉ cần click vào overlay)
+  window.addEventListener('click', function (e) {
+      if (e.target === registerForm) {
+          registerForm.style.display = 'none';
+          document.body.classList.remove('modal-open');
+      }
+  });
+
+  // Xử lý submit form đăng ký
+  if (registrationForm) {
+      registrationForm.addEventListener('submit', function (e) {
+          e.preventDefault(); // Ngừng hành động mặc định của form
+
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          // Kiểm tra xem tất cả các trường có được nhập đầy đủ không
+          if (name && email && password) {
+              formMessage.textContent = "Registration successful! Welcome aboard.";
+              formMessage.style.color = "green";
+          } else {
+              formMessage.textContent = "Please fill all fields.";
+              formMessage.style.color = "red";
+          }
+      });
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const includeElements = document.querySelectorAll('[data-include]');
+  
+  includeElements.forEach((el) => {
+     const file = el.getAttribute('data-include');
+     
+     if (file) {
+        fetch(file)
+           .then(response => response.text())
+           .then(data => {
+              el.innerHTML = data; // Chèn nội dung header vào div
+              initializeFormEvents(); // Gọi hàm khởi tạo sự kiện cho form sau khi chèn xong
+           })
+           .catch(err => {
+              console.error('Error loading header:', err);
+           });
+     }
+  });
+});
+
+
+function initializeFormEvents() {
+  const openFormButton = document.getElementById('openForm');
+  const closeFormButton = document.getElementById('closeForm');
+  const registerForm = document.getElementById('registerForm');
+  const registrationForm = document.getElementById('registrationForm');
+  const formMessage = document.getElementById('formMessage');
+
+  // Mở form khi nhấn nút Register
+  if (openFormButton) {
+     openFormButton.addEventListener('click', function () {
+        registerForm.style.display = 'flex'; // Hiển thị form
+        document.body.classList.add('modal-open'); // Ngừng cuộn trang
+     });
+  }
+
+  // Đóng form khi nhấn vào nút đóng (x)
+  if (closeFormButton) {
+     closeFormButton.addEventListener('click', function () {
+        registerForm.style.display = 'none'; // Ẩn form
+        document.body.classList.remove('modal-open'); // Bật lại cuộn trang
+     });
+  }
+
+  // Đảm bảo form có thể đóng khi nhấn ra ngoài form
+  if (registerForm) {
+     window.addEventListener('click', function (e) {
+        if (e.target === registerForm) {
+           registerForm.style.display = 'none';
+           document.body.classList.remove('modal-open'); // Bật lại cuộn trang
+        }
+     });
+  }
+
+  // Xử lý submit form
+  if (registrationForm) {
+     registrationForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Ngừng hành động mặc định của form
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Kiểm tra xem tất cả các trường có được nhập đầy đủ không
+        if (name && email && password) {
+           formMessage.textContent = "Registration successful! Welcome aboard.";
+           formMessage.style.color = "green";
+        } else {
+           formMessage.textContent = "Please fill all fields.";
+           formMessage.style.color = "red";
+        }
+     });
+  }
+}
+

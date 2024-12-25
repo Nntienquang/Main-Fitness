@@ -138,11 +138,11 @@ img {
 }
 
 .navbar .btn-primary:hover {
-  background-color: var(--secondary-color-dark); /* Sáng hơn khi hover */
-  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+  background-color: var(--secondary-color-dark); 
+  transform: scale(1.05);
 }
 
-/* Biểu tượng mạng xã hội */
+
 .header__nav__social {
   margin-left: 20px;
 }
@@ -557,7 +557,9 @@ h2 {
   position: relative;
   padding-top: 50px;
 }
-
+.footer-icon a:hover{
+  color: var(--secondary-color-dark);
+}
 .footer-logo img {
   max-width: 150px;
   transition: transform 0.3s ease-in-out;
@@ -585,7 +587,7 @@ h2 {
   width: 40px;
   height: 40px;
   font-size: 1.2rem;
-  border: 2px solid #bbb;
+  border: 2px solid #846363;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -612,4 +614,100 @@ h2 {
   font-size: 0.9rem;
   background: rgba(0, 0, 0, 0.2);
   padding: 10px 0;
+}
+
+/* Mặc định cho form overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Làm mờ nền */
+  display: none; /* Ẩn form khi chưa được mở */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Đảm bảo form ở trên các thành phần khác */
+}
+
+/* Form đăng ký */
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-title {
+  color: #3498db;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Nút đóng (x) */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #3498db;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #2980b9;
+}
+
+/* Các trường nhập trong form */
+.form-control {
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #2ecc71;
+  outline: none;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Nút submit */
+button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+/* Thông báo khi đăng ký thành công hoặc lỗi */
+.message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Overlay khi mở form */
+body.modal-open {
+  overflow: hidden; /* Chặn cuộn trang khi mở form */
 }
