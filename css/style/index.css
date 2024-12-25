@@ -526,23 +526,23 @@ h2 {
 
 .pricing-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgb(255, 251, 251);
 }
 
 .pricing-price {
-  color: #343a40;
+  color: var(--primary-color);
 }
 
 .card-title {
-  color: #495057;
+  color: var(--primary-color);
 }
 
 .pricing-card:hover .card-title {
-  color: #007bff;
+  color: var(--primary-color-light);
 }
 
 .pricing-card:hover .btn {
-  background: #007bff;
+  background: var(--primary-color-light);
   color: #ffffff;
 }
 
@@ -587,7 +587,7 @@ h2 {
   width: 40px;
   height: 40px;
   font-size: 1.2rem;
-  border: 2px solid #846363;
+  border: 2px solid #bbb;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
