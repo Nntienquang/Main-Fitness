@@ -490,10 +490,6 @@ h2 {
   font-weight: 500;
   color: var(--secondary-color-dark);
 }
-
-.join-card p {
-  color: var(--text-light);
-}
 /* Join-card end */
 
 /* Price */
