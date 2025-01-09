@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/* Định nghĩa biến chủ đạo */
+/* Định nghĩachủ đạo */
 :root {
   --primary-color: #2f2b2b;
   --primary-color-light: #162e5e;
@@ -10,10 +10,9 @@
   --text-light: #8ba2c3;
   --white: #ffffff;
   --max-width: 1200px;
-  --transition: 0.3s ease; /* Biến cho hiệu ứng chuyển động */
+  --transition: 0.3s ease; 
 }
 
-/* Reset và cấu trúc cơ bản */
 *,
 *::before,
 *::after {
@@ -34,8 +33,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* Nút bấm */
 .btn {
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -50,23 +47,18 @@ a {
   text-transform: uppercase;
   transition: .5s;
 }
-
 .btn:hover {
   background-color: var(--secondary-color-dark);
 }
-
 .btn.btn-primary
 {
   color: #ffffff;
 }
-
-/* Hình ảnh */
 img {
   width: 100%;
   display: block;
-  object-fit: cover; /* Giữ tỷ lệ khung hình tốt hơn */
+  object-fit: cover;
 }
-/* Màu nền chính */
 .custom-bg{
   background-color: var(--primary-color-light);
 }
@@ -75,21 +67,21 @@ img {
 /*** Navbar ***/
 /* Thanh Navbar chính */
 .navbar {
-  background-color: var(--primary-color-extra-light); /* Nền chủ đạo */
-  position: fixed; /* Gắn navbar cố định ở trên cùng */
-  top: 0; /* Ở vị trí trên cùng của trang */
-  left: 0; /* Canh trái */
-  width: 100%; /* Chiếm toàn bộ chiều rộng */
-  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tối ưu hóa transition */
-  padding: 1rem; /* Thêm padding để navbar không bị dính vào biên */
+  background-color: var(--primary-color-extra-light);
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  padding: 1rem; 
 }
 
-/* Màu nền khi cuộn */
+
 .navbar.scrolled {
-  background-color: var(--primary-color-light); /* Màu tối hơn khi cuộn */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Đổ bóng đậm hơn */
+  background-color: var(--primary-color-light); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); 
 }
 
 /* Logo */
@@ -99,23 +91,20 @@ img {
 }
 
 .navbar-brand img:hover {
-  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+  transform: scale(1.1); 
 }
 
-/* Nút toggler */
 .navbar-toggler {
-  color: var(--white); /* Màu biểu tượng */
+  color: var(--white); 
   font-size: 1.25rem;
   border: none;
 }
 
 .navbar-toggler:hover {
-  color: var(--secondary-color); /* Màu nhấn khi hover */
+  color: var(--secondary-color); 
 }
-
-/* Các liên kết trong navbar */
 .navbar-nav .nav-link {
-  color: var(--text-light); /* Màu chữ nhạt */
+  color: var(--text-light); 
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -123,12 +112,12 @@ img {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--secondary-color); /* Màu nhấn khi hover hoặc active */
+  color: var(--secondary-color); 
 }
 
-/* Nút "Join Now" */
+/* Nút "Register" */
 .navbar .btn-primary {
-  background-color: var(--secondary-color); /* Màu nhấn chính */
+  background-color: var(--secondary-color); 
   color: var(--white);
   border: none;
   border-radius: 25px;
@@ -156,10 +145,9 @@ img {
 }
 
 .header__nav__social a:hover {
-  color: var(--secondary-color-dark); /* Đổi màu khi hover */
+  color: var(--secondary-color-dark); 
 }
 
-/* Tối ưu hóa navbar-nav */
 .navbar-dark .navbar-nav .nav-link {
   position: relative;
   margin-left: 25px;
@@ -172,12 +160,11 @@ img {
   transition: 0.5s;
 }
 
-/* Điều chỉnh padding khi có sticky */
+
 .sticky-top.navbar-dark .navbar-nav .nav-link {
   padding: 20px 0;
 }
 
-/* Màu khi hover hoặc active */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--secondary-color) !important;
@@ -203,7 +190,6 @@ img {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  /* transform: translateY; */
   font-size: 40rem;
   font-weight: 400;
   line-height: 20rem;
@@ -249,7 +235,7 @@ h2 {
   text-align: center; 
 }
 
-/* Card Styles */
+/* Card */
 .explore{
   background-color: var(--primary-color-extra-light);
 }
@@ -259,30 +245,28 @@ h2 {
   overflow: hidden; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  position: relative; /* Để hiệu ứng nền được áp dụng đúng */
+  position: relative; 
 }
 
-/* Hình nền cho các card */
 .card::before {
-  content: ''; /* Tạo phần giả trước card để áp dụng nền */
-  position: absolute; /* Định vị vị trí tuyệt đối của phần nền */
-  top: 0; left: 0; right: 0; bottom: 0; /* Chiếm toàn bộ không gian của card */
+  content: ''; 
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; 
   background-size: cover; 
   background-position: center; 
   opacity: 0.4; 
-  z-index: -1; /* Đưa hình nền xuống dưới các nội dung của card */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng mượt mà khi hover */
-  
+  z-index: -1; 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
 
 .card:nth-child(1)::before {
-  background-image: url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltbWVyfGVufDB8fDB8fHww); /* Hình nền cho card 1 */
+  background-image: url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltbWVyfGVufDB8fDB8fHww); 
   background-repeat: no-repeat;
 }
 
 .card:nth-child(2)::before {
-  background-image: url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltbWVyfGVufDB8fDB8fHww); /* Hình nền cho card 2 */
+  background-image: url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltbWVyfGVufDB8fDB8fHww);
   background-repeat: no-repeat;
 }
 
@@ -357,7 +341,6 @@ h2 {
 
 
 /* Counter */
-
 .section {
   padding: 50px 0;
   background: linear-gradient(135deg,var(--primary-color-extra-light), var(--secondary-color)); 
@@ -395,11 +378,9 @@ h2 {
   text-transform: uppercase;
   color: #e0e0e0;
 }
-
 /* Counter end */
 
 /* Class */
-/* Phong cách cho container chính */
 .class_img-1 {
   position: relative;
   width: 100%;
@@ -418,7 +399,7 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Cột nội dung */
+
 .section_header {
   margin-left:30px;
   font-size: 2.5rem;
@@ -435,7 +416,6 @@ h2 {
 
 
 /* Join-section */
-/* Đảm bảo phần tử chính trong section không phủ kín background */
 .join-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -449,29 +429,29 @@ h2 {
 
 .join-main-img {
   border-radius: 10px;
-  max-width: 70%; /* Giới hạn chiều rộng ảnh */
-  height: auto; /* Giữ tỷ lệ cho hình ảnh */
-  object-fit: cover; /* Giữ tỷ lệ cho ảnh mà không bị biến dạng */
-  transition: transform 0.3s ease-in-out; /* Hiệu ứng zoom khi hover */
-   object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh và không phủ kín background */
-  margin: 0 auto; /* Căn giữa ảnh */
+  max-width: 70%; 
+  height: auto; 
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out; 
+   object-fit: contain; 
+  margin: 0 auto; 
 }
 
 .join-main-img:hover {
-  transform: scale(1.05); /* Zoom hình ảnh khi hover */
+  transform: scale(1.05); 
 }
 
 .join-grid {
   position: absolute;
-  bottom: -5rem; /* Đưa grid lên một chút so với phần hình ảnh */
+  bottom: -5rem; 
   width: 100%;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.6); /* Nền tối cho grid */
+  background-color: rgba(0, 0, 0, 0.6); 
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
 }
 
 .join-card {
@@ -487,8 +467,8 @@ h2 {
 }
 
 .join-card:hover {
-  transform: translateY(-10px); /* Di chuyển lên khi hover */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng mạnh khi hover */
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .icon-container {
@@ -501,7 +481,7 @@ h2 {
 }
 
 .join-card:hover .icon-container {
-  transform: rotate(360deg); /* Quay icon khi hover */
+  transform: rotate(360deg); 
 }
 
 .join-card h4 {
@@ -514,8 +494,6 @@ h2 {
 .join-card p {
   color: var(--text-light);
 }
-
-
 /* Join-card end */
 
 /* Price */
@@ -616,18 +594,17 @@ h2 {
   padding: 10px 0;
 }
 
-/* Mặc định cho form overlay */
 .form-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Làm mờ nền */
-  display: none; /* Ẩn form khi chưa được mở */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Đảm bảo form ở trên các thành phần khác */
+  z-index: 1000; 
 }
 
 /* Form đăng ký */
@@ -664,7 +641,7 @@ h2 {
 .close-btn:hover {
   color: #2980b9;
 }
-/* Các trường nhập trong form */
+
 .form-control {
   border: 1px solid black;
   border-radius: 5px;
@@ -682,7 +659,7 @@ h2 {
   color: #3498db;
 }
 
-/* Nút submit */
+
 button[type="submit"] {
   background-color: var(--secondary-color);
   color: white;
@@ -698,14 +675,14 @@ button[type="submit"]:hover {
   background-color: var(--secondary-color-dark);
 }
 
-/* Thông báo khi đăng ký thành công hoặc lỗi */
+
 .message {
   text-align: center;
   font-weight: bold;
   margin-top: 1rem;
 }
 
-/* Overlay khi mở form */
+
 body.modal-open {
-  overflow: hidden; /* Chặn cuộn trang khi mở form */
+  overflow: hidden; 
 }

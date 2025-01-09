@@ -10,10 +10,9 @@
   --text-light: #8ba2c3;
   --white: #ffffff;
   --max-width: 1200px;
-  --transition: 0.3s ease; /* Biến cho hiệu ứng chuyển động */
+  --transition: 0.3s ease; 
 }
 
-/* Reset và cấu trúc cơ bản */
 *,
 *::before,
 *::after {
@@ -34,158 +33,16 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* Nút bấm */
-.btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--white);
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color var(--transition);
-  font-family: 'Nunito', sans-serif;
-  text-transform: uppercase;
-  transition: .5s;
-}
-
-.btn:hover {
-  background-color: var(--secondary-color-dark);
-}
-.btn.btn-primary
-{
-  color: #ffffff;
-}
 /* Hình ảnh */
 img {
   width: 100%;
   display: block;
-  object-fit: cover; /* Giữ tỷ lệ khung hình tốt hơn */
+  object-fit: cover
 }
-/* Màu nền chính */
 .custom-bg{
   background-color: var(--primary-color-light);
 }
 /* Phần chung end*/
-
-/*** Navbar ***/
-/* Thanh Navbar chính */
-.navbar {
-  background-color: var(--primary-color-extra-light); /* Nền chủ đạo */
-  position: fixed; /* Gắn navbar cố định ở trên cùng */
-  top: 0; /* Ở vị trí trên cùng của trang */
-  left: 0; /* Canh trái */
-  width: 100%; /* Chiếm toàn bộ chiều rộng */
-  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tối ưu hóa transition */
-  padding: 1rem; /* Thêm padding để navbar không bị dính vào biên */
-}
-
-/* Màu nền khi cuộn */
-.navbar.scrolled {
-  background-color: var(--primary-color-light); /* Màu tối hơn khi cuộn */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Đổ bóng đậm hơn */
-}
-
-/* Logo */
-.navbar-brand img {
-  max-height: 60px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-brand img:hover {
-  transform: scale(1.1); /* Phóng to nhẹ khi hover */
-}
-
-/* Nút toggler */
-.navbar-toggler {
-  color: var(--white); /* Màu biểu tượng */
-  font-size: 1.25rem;
-  border: none;
-}
-
-.navbar-toggler:hover {
-  color: var(--secondary-color); /* Màu nhấn khi hover */
-}
-
-/* Các liên kết trong navbar */
-.navbar-nav .nav-link {
-  color: var(--text-light); /* Màu chữ nhạt */
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--secondary-color); /* Màu nhấn khi hover hoặc active */
-}
-
-/* Nút "Join Now" */
-.navbar .btn-primary {
-  background-color: var(--secondary-color); /* Màu nhấn chính */
-  color: var(--white);
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.navbar .btn-primary:hover {
-  background-color: var(--secondary-color-dark); /* Sáng hơn khi hover */
-  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
-}
-
-/* Biểu tượng mạng xã hội */
-.header__nav__social {
-  margin-left: 20px;
-}
-
-
-.header__nav__social a {
-  color: var(--text-light);
-  font-size: 1rem;
-  margin-left: 10px;
-  transition: color 0.3s ease;
-}
-
-.header__nav__social a:hover {
-  color: var(--secondary-color-dark); /* Đổi màu khi hover */
-}
-
-/* Tối ưu hóa navbar-nav */
-.navbar-dark .navbar-nav .nav-link {
-  position: relative;
-  margin-left: 25px;
-  padding: 35px 0;
-  font-size: 15px;
-  color: var(--text-light) !important;
-  text-transform: uppercase;
-  font-weight: 500;
-  outline: none;
-  transition: 0.5s;
-}
-
-/* Điều chỉnh padding khi có sticky */
-.sticky-top.navbar-dark .navbar-nav .nav-link {
-  padding: 20px 0;
-}
-
-/* Màu khi hover hoặc active */
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--secondary-color) !important;
-}
-
-/* Tối ưu hóa logo */
-.navbar-dark .navbar-brand img {
-  max-height: 100px;
-  transition: 0.5s;
-}
 
 .img-wrap:hover{
   transform: scale(1.1);
@@ -219,48 +76,3 @@ img {
   }
   
   
- /* Footer Styling */
-.footer {
-  background: linear-gradient(145deg, var(--primary-color-extra-light), var(--primary-color-light));
-}
-
-.footer-logo img {
-  max-width: 150px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.footer-logo img:hover {
-  transform: scale(1.1); /* Phóng to nhẹ khi hover */
-}
-.footer-link {
-  color: #bbb;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-.footer-socials .btn-social {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
-  border: 2px solid #bbb;
-  transition: all 0.3s ease;
-}
-
-.footer-socials .btn-social:hover {
-  background-color: #fff;
-  color: #000;
-  transform: scale(1.1);
-}
-
-.footer-bar {
-  color: #aaa;
-  font-size: 0.9rem;
-}
